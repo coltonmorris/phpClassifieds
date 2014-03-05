@@ -1,8 +1,8 @@
 <?php
 function do_query($query){
 	$host = 'mysql.cs.dixie.edu';
-	$usr = 'cmorris';
-	$pass =  '2597settlers';
+	$usr = '';
+	$pass =  '';
 	$conn = mysqli_connect($host,$usr,$pass,$usr) or die ("not connected");
 	$results = mysqli_query($conn,$query) or die (mysqli_error($conn));
 	mysqli_close($conn);
