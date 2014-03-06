@@ -23,7 +23,7 @@
     
     if it is posted. If you get harassed, delete your post and contact the Dean of Students.<br><br> 
     
-    <span class="tab"></span>This site was developed by Alex, Anthie, Colten, and Tyler. Alex will continue to develop it after 
+    <span class="tab"></span>This site was developed by Alex, Anthie, Colton, and Tyler. Alex will continue to develop it after 
     
     the initial launch and any feature requests should be sent to plambson@dmail.dixie.edu
     </div><!--close bodytext-->
