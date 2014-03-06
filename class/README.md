@@ -1,5 +1,10 @@
 phpClassifieds
 ==============
+Account Detail: 
+  $host = 'localhost';
+	$usr = 'ataxicde_admin';
+	$pass =  '@greglayton$$$';
+	$db = 'ataxicde_classifieds';
 
 cs2450 classified project done in php
 
