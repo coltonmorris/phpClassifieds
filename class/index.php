@@ -7,7 +7,7 @@
                 <ul class="subcats">
                 	<li>Phones</li>
                     <li>Tablets</li>
-                    <li>Computers</li>
+                    <li>Computers and stuff</li>
                 </ul>
                     <!--close a listhead-->
             </div><!--close the column-->
@@ -16,7 +16,7 @@
                 Appliances
                 </div>
                 <ul class="subcats">
-                	<li>dildos</li>
+                	<li>dildos and others and junk</li>
                     <li>fleshlights</li>
                     <li>blenders</li>
                 </ul>
