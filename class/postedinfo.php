@@ -13,7 +13,6 @@ $content .= "CATEGORY: $_POST[Category] ";
 $query = "insert into jobs (username,description) values ('$username','$content')";
 $results = do_query($query);
 show_table($results);
-}
 ?>
  </p>
 </div> <!-- end middlecolumn -->
