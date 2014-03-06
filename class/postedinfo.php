@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php include_once('head.php') ?>
 <div id="middlecolumn">
 <p>
@@ -38,4 +37,3 @@ show_table($results);
  </p>
 </div> <!-- end middlecolumn -->
 <?php include_once('foot.php') ?>
->>>>>>> 5cd0d602615109f9835e82adb6c2e726abd85951
