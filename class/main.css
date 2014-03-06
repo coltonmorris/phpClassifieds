@@ -7,6 +7,10 @@ h1 {
 body {	
 	min-width:960px;
 	font-family:Arial;
+	background-image:url(bg.jpg);
+	background-repeat:repeat;
+	background-size:3%;
+	opacity:10%;
 }
 .bodytext{
 	padding:10px;
@@ -148,6 +152,7 @@ body {
 	border-top-right-radius: 5px;*/
 }
 #wrapper{
+	opacity:100%;
 	margin-top:30px;
 	margin-bottom:30px;
 	margin-left:auto;
@@ -155,6 +160,7 @@ body {
 	width:70%;
 	min-width:960px;
 	box-shadow: 0 0 15px 0px #2A3F55;
+	background-color:#fff;
 	/*border-radius:5px;*/
 }
 
