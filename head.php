@@ -7,9 +7,9 @@
 <div id="navwrapper">
             <a href="index.html"><img src="{% static "DSULogo.png" %}" id="homebutton" alt="DIXIE Classifieds"></a>
             <nav id="nav">
-                <a href="{% url "home" %}" alt="" class="buttons">Home</a>
-                <a href="{% url "listings" %}" alt="" class="buttons" id="level2button">Listings</a>
-                <a href="{% url "about" %}" alt="" class="buttons" id="level3button">About</a>
+                <a href="index.php" alt="" class="buttons">Home</a>
+                <a href="listings.php" alt="" class="buttons" id="level2button">Listings</a>
+                <a href="about.php" alt="" class="buttons" id="level3button">About</a>
             </nav>
         </div>
 <?php
