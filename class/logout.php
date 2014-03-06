@@ -2,7 +2,7 @@
 <div id="middlecolumn">
 <p>
 <?php
-session_destroy();
+logout();
 echo "You are logged out";
 ?>
 </p>

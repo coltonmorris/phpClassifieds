@@ -14,6 +14,7 @@
 </p>
 <?php
 if (isset($_POST['new_user'])){
+		logout();
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		$email = $_POST['email'];

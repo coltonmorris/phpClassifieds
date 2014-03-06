@@ -6,6 +6,7 @@
 		Description: <textarea name="Description" cols="65" rows="10"></textarea>
 		Cost: <input type="text" name="Cost"><br/>
 		Category:<select name ="Category">
+				<!-- this list will be pulled from the database -->
 				 <?php $category = array("Electronic","Vehicles","Textbooks","Recreation","Rides");
 				foreach($category as $cat) {
 					//creates options for select box with proper format

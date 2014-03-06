@@ -151,7 +151,12 @@ function add_user($username,$password,$email,$RoleID){
 	}
 	return $results;
 }
+function logout(){
+session_destroy();
+}
 function login($username,$password){
+	//we are only going to have an admin
+	logout();
 	session_destroy();
 	session_start();
 	$query = "select RoleID from users where username='$username'
@@ -163,17 +168,10 @@ function login($username,$password){
 		$_SESSION['username'] = $username;
 		$_SESSION['password'] = $password;
 		$_SESSION['RoleID'] = $RoleID;
+		$filename = "user_control.php";
 		//admin
 		if ($RoleID == 1){
 			$filename = "admin_control.php";
-		}
-		//employer
-		else if ($RoleID == 2){
-			$filename = "employer_control.php";
-		}
-		//employee
-		else{
-			$filename = "employee_control.php";
 		}
 		$_SESSION['control_panel'] = $filename;
 		$info = "$username, you are logged in";
