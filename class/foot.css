@@ -16,3 +16,32 @@
 	background-image: -webkit-linear-gradient(bottom, #BF0534 0%, #830D11 100%);
 	background-image: linear-gradient(to top, #BF0534 0%, #830D11 100%);
 }
+.columnb{
+	padding: 10px 20px 0 20px;
+	height:90px;
+	width:30%;
+	text-align:left;
+	float:center;
+	display:inline-block;
+}
+.columnb ul{
+	list-style-type:none;
+	text-align:left;
+	font-size:16px;
+}
+.columnb a{
+	color:#FFF;
+	text-decoration:none;
+}
+.columnb a:hover{
+	-webkit-transition: 500ms linear 0s;
+	-moz-transition: 500ms linear 0s;
+	-o-transition: 500ms linear 0s;
+	transition: 500ms linear 0s;
+	color:#C8955B;
+	text-shadow:0 0 2px #FFF;
+}
+.columnb a:active{
+	position:relative;
+	top:2px;
+}
