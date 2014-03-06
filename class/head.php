@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<title>CS 4000 job site</title>
+<title>DSU Classifieds</title>
 <link rel="stylesheet" href="main.css">
 <body>
 <div id="wrapper">
 <?php session_start(); ?>
         <div id="navwrapper">
-            <a href="index.html"><img src="{% static "DSULogo.png" %}" id="homebutton" alt="DIXIE Classifieds"></a>
+            <a href="index.html"><img src="DSULogo.png" id="homebutton" alt="DIXIE Classifieds"></a>
             <nav id="nav">
                 <a href="index.php" alt="" class="buttons">Home</a>
                 <a href="listings.php" alt="" class="buttons" id="level2button">Listings</a>

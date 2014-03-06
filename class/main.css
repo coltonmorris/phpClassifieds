@@ -69,6 +69,7 @@ body {
 	float: left;
 	width:32%;
 	padding: 5px;
+	text-align:center;
 	/*
 	border-style:solid;
 	border-width:medium;
@@ -87,6 +88,8 @@ body {
 .subcats{
 	text-align:left;
 	font-size:18px;
+	position:relative;
+	left: 5%;
 	font-family:Arial;
 	color:	#BB0531;
 }
@@ -95,23 +98,6 @@ body {
 }
 #clear{
 	clear:both;
-}
-#footerwrapper{
-	margin: 0px auto;
-	height:100px;
-	width:100%;
-	min-width: 950px;
-	font-weight:100;
-	margin-left:auto;
-	margin-right:auto;
-	/*border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;*/
-	background-image: -ms-linear-gradient(bottom, #BF0534 0%, #830D11 100%);
-	background-image: -moz-linear-gradient(bottom, #BF0534 0%, #830D11 100%);
-	background-image: -o-linear-gradient(bottom, #BF0534 0%, #830D11 100%);
-	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #BF0534), color-stop(1, #830D11));
-	background-image: -webkit-linear-gradient(bottom, #BF0534 0%, #830D11 100%);
-	background-image: linear-gradient(to top, #BF0534 0%, #830D11 100%);
 }
 #homebutton{
 	height:90px;
