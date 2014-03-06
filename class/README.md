@@ -6,6 +6,9 @@ Account Detail:
 	$pass =  '@greglayton$$$';
 	$db = 'ataxicde_classifieds';
 
+justhost password for the unworthy: username: ataxicde
+				    password: @!Whatwouldbegood69
+
 db_functions is where functions that use the database should be added/editted.
 
 session is hopefully where all session variables are declared, but I don't think I've stayed true to that standard.
