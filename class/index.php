@@ -16,8 +16,8 @@
                 Appliances
                 </div>
                 <ul class="subcats">
-                	<li>dildos and others and junk</li>
-                    <li>fleshlights but why</li>
+                	<li>Whacky waving inflatable arm flailing tube men</li>
+                    <li>flashlights</li>
                     <li>blenders</li>
                 </ul>
             </div>
@@ -25,6 +25,11 @@
             	<div class="listheads">
                 	Vehicles
                 </div>
+                <ul class="subcats">
+                	<li>Infiniti Master race</li>
+                    <li>Inferior suburu</li>
+                    <li>American <del>toys</del> cars</li>
+                </ul>
             </div>
             <br id="clear">
     </div>
