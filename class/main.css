@@ -7,8 +7,9 @@ h1 {
 body {	
 	min-width:960px;
 	font-family:Arial;
-	background-image:url(hex.png);
+	background-image:url(cell.png);
 	background-repeat:repeat;
+	background-size:3%;
 }
 .bodytext{
 	padding:10px;
@@ -91,9 +92,15 @@ body {
 	height: 900px;
 }
 .listheads{
+	background-image: -ms-linear-gradient(bottom, #830D11 0%, #BF0534 100%);
+	background-image: -moz-linear-gradient(bottom, #830D11 0%, #BF0534 100%);
+	background-image: -o-linear-gradient(bottom, #830D11 0%, #BF0534 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #830D11), color-stop(1, #BF0534));
+	background-image: -webkit-linear-gradient(bottom, #830D11 0%, #BF0534 100%);
+	background-image: linear-gradient(to top, #830D11 0%, #BF0534 100%);
 	font-size: 36px;
-	padding:5px;
-	background-color:#BB0531;
+	padding:0 20px;
+	border-radius:3px;
 	color:#FFFBF0;	
 	display:inline-block;
 	font-family: Arial;
