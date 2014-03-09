@@ -176,7 +176,7 @@ function login($username,$password){
 		$info = "$username, you are logged in";
 	}
 	else { 
-		$info = "Wrong log in credentials";
+		$info = "Username or Password is incorrect";
 	}
 	return $info;
 }

@@ -1,10 +1,10 @@
+<?php session_start(); ?>
 <!DOCTYPE HTML>
 <html lang="en">
 <title>DSU Classifieds</title>
 <link rel="stylesheet" href="main.css">
 <body>
 <div id="wrapper">
-<?php session_start(); ?>
         <div id="navwrapper">
             <a href="index.html"><img src="DSULogo.png" id="homebutton" alt="DIXIE Classifieds"></a>
             <nav id="nav">
