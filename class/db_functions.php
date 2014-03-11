@@ -52,7 +52,7 @@ function show_user_admin($results) {
     echo "</table>";
 }
 function show_table($results) {
-    echo "<table border=1>";
+    echo "<table class='listing' border=1>";
     while ($row = mysqli_fetch_assoc($results)) {
         echo "<tr>";
         foreach ($row as $k => $val) {

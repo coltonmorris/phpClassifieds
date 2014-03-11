@@ -105,6 +105,10 @@ body {
 	display:inline-block;
 	font-family: Arial;
 }
+.listing{
+	padding:10px;
+	border-color:transparent;
+}
 .subcats{
 	text-align:left;
 	font-size:16px;
@@ -170,10 +174,7 @@ body {
 
 #middlecolumn {
 	padding-left:2px;
-	font:"Comic Sans MS", cursive (0,0,0);
-	border-style: solid;
-	border-width: 5px;
-	border-color:#000080;
+	font:Arial (0,0,0);
 	width: 600px;
 	margin:80px auto;
 }
