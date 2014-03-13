@@ -19,5 +19,8 @@ include_once('db_functions.php');
 if (!isset($_SESSION['allow'])){
 	echo "hello world";
 }
+else {
+	echo "fuck this";
+}
 
 ?>
