@@ -3,9 +3,11 @@
 <p>
 <?php
 if(isset($_POST['login'])){
-	//set RoleID  1=admin 2=employer 3=employee
-	//echo login($_POST['username'],$_POST['password']);
+	//set RoleID  1=admin 
+	//login starts a session
 	echo login($_POST['username'],$_POST['password']);
+	$_SESSION['allow'] = true;
+
 }
 ?>
 </p>

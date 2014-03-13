@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE HTML>
 <html lang="en">
 <title>DSU Classifieds</title>
@@ -16,4 +15,9 @@
 <?php
 include_once('session.php');
 include_once('db_functions.php');
+#user is logged in if allow is set
+if (!isset($_SESSION['allow'])){
+	echo "hello world";
+}
+
 ?>
