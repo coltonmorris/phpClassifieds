@@ -20,7 +20,7 @@ if (!isset($_SESSION['allow'])){
 	echo "hello world";
 }
 else {
-	echo "fuck this";
+	echo "fuck this,im out";
 }
 
 ?>
