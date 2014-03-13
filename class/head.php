@@ -15,4 +15,12 @@
 <?php
 include_once('session.php');
 include_once('db_functions.php');
+#user is logged in if allow is set
+if (!isset($_SESSION['allow'])){
+	echo "hello world";
+}
+else {
+	echo "fuck this";
+}
+
 ?>
