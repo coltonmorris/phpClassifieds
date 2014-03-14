@@ -1,10 +1,16 @@
-<?php include_once('head.php');
+<?php
 if(isset($_POST['login'])){
 	//set RoleID  1=admin 
 	//login starts a session
 	login($_POST['username'],$_POST['password']);
-	//header('Location: http://www.ataxicdesign.com/phpClassifieds/class/index.php');
-	//exit();
+	if ($_SESSION['badlogin'] == false){
+		header('Location: http://www.ataxicdesign.com/phpClassifieds/class/index.php');
+		exit();
+	}
+}
+include_once('head.php');
+if ($_SESSION['badlogin'] == true){
+	echo "Your username or password was incorrect";
 }
 
 ?>

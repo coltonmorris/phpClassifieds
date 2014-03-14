@@ -174,9 +174,10 @@ function login($username,$password){
 		}
 		$_SESSION['control_panel'] = $filename;
 		$_SESSION['allow'] = true;
+		$_SESSION['badlogin']=false;
 	}
 	else { 
-		echo "Username or Password is incorrect";
+		$_SESSION['badlogin']=true;
 	}
 }
 ?>
