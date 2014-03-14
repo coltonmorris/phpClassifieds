@@ -9,7 +9,7 @@
             </ul>
         </div>
         <div class="columnb">
-        	<?php 
+			<?php 
 			if (isset($_SESSION['username'])){
 			echo $_SESSION['username'] ." you are logged in";
 			}

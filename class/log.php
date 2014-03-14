@@ -7,7 +7,6 @@ if(isset($_POST['login'])){
 	//login starts a session
 	echo login($_POST['username'],$_POST['password']);
 	$_SESSION['allow'] = true;
-
 }
 ?>
 </p>
