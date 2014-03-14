@@ -89,7 +89,7 @@ body {
 	border-width:medium;
 	border-color:#D41F55;
 	*/
-	height: 200px;
+	height: auto;
 }
 .listheads{
 	background-image: -ms-linear-gradient(bottom, #830D11 0%, #BF0534 100%);
