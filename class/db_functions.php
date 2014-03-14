@@ -174,7 +174,6 @@ function login($username,$password){
 		}
 		$_SESSION['control_panel'] = $filename;
 		$_SESSION['allow'] = true;
-		header('Location: http://www.ataxicdesign.com/phpClassifieds/class/index.php');
 	}
 	else { 
 		echo "Username or Password is incorrect";

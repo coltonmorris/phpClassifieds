@@ -5,6 +5,7 @@ if(isset($_POST['login'])){
 	//login starts a session
 	echo "test";
 	login($_POST['username'],$_POST['password']);
+	header('Location: http://www.ataxicdesign.com/phpClassifieds/class/index.php');
 }
 ?>
 
