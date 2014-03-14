@@ -148,7 +148,7 @@ body {
 	color:#C8955B;
 	text-shadow:0 0 2px #FFF;
 }
-.logoutbutton a:active, postbutton:active{
+.logoutbutton a:active, postbutton a:active{
 	position:relative;
 	top:2px;
 }
