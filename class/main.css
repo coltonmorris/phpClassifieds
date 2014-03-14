@@ -57,6 +57,12 @@ body {
 	position:relative;
 }
 .buttons:hover, .buttons:focus {
+	background-image: -ms-linear-gradient(bottom, #830D11 0%, #BF0534 100%);
+	background-image: -moz-linear-gradient(bottom, #830D11 0%, #BF0534 100%);
+	background-image: -o-linear-gradient(bottom, #830D11 0%, #BF0534 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #830D11), color-stop(1, #BF0534));
+	background-image: -webkit-linear-gradient(bottom, #830D11 0%, #BF0534 100%);
+	background-image: linear-gradient(to top, #830D11 0%, #BF0534 100%);
 	text-decoration: none;
 	color: #aaf;
 	text-shadow: none;
@@ -110,13 +116,34 @@ body {
 	border-color:transparent;
 }
 .logoutbutton{
+	background-image: -ms-linear-gradient(bottom, #BF0534 0%, #830D11 100%);
+	background-image: -moz-linear-gradient(bottom, #BF0534 0%, #830D11 100%);
+	background-image: -o-linear-gradient(bottom, #BF0534 0%, #830D11 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #BF0534), color-stop(1, #830D11));
+	background-image: -webkit-linear-gradient(bottom, #BF0534 0%, #830D11 100%);
+	background-image: linear-gradient(to top, #BF0534 0%, #830D11 100%);
 	width: 100px;
-	height: 40px;
+	height: 30px;
 	float:right;
 	position: relative;
-	top: 40px;
-	color: #ffffff;
-	background-color: red;
+	text-align:right;
+}
+.logoutbutton a{
+	color:#ffffff;
+	text-decoration:none;
+	padding: 2px 0 2px 4px;
+}
+.logoutbutton a:hover{
+	-webkit-transition: 500ms linear 0s;
+	-moz-transition: 500ms linear 0s;
+	-o-transition: 500ms linear 0s;
+	transition: 500ms linear 0s;
+	color:#C8955B;
+	text-shadow:0 0 2px #FFF;
+}
+logoutbutton a:active{
+	position:relative;
+	top:2px;
 }
 	
 .subcats{
