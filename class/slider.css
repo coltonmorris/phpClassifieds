@@ -28,7 +28,10 @@ pre + h2{
 }
 
 #container{
-	margin:0 auto 0 auto;
+	font-family: "Source Code Pro", monospace;
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
 	padding-bottom:80px;
 }
 
