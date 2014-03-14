@@ -9,8 +9,17 @@ if (!isset($_SESSION['allow'])){
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
+<head>
 <title>DSU Classifieds</title>
 <link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="bjqs.css">
+<link rel="stylesheet" href="slider.css">
+<link rel="stylesheet" href="foot.css">
+<!-- load jQuery and the plugin -->
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="js/bjqs-1.3.min.js"></script>
+<link rel="shortcut icon" href="images/favicon.ico">
+</head>
 <body>
 <div id="wrapper">
         <div id="navwrapper">
