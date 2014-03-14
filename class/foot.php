@@ -15,7 +15,7 @@
 			echo $_SESSION['username'] ." you are logged in";
 			}
 			else {
-				echo "not working";
+				echo "Please login";
 			}
 			?>
             </div>
