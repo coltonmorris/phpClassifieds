@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="foot.css">
     <div id="footerwrapper">
     	<div class="columnb">
         	<ul>
