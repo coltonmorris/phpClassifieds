@@ -16,8 +16,10 @@
 include_once('session.php');
 include_once('db_functions.php');
 #user is logged in if allow is set
-if (!isset($_SESSION['allow']) ){
-	echo $_SERVER['PHP_SELF'];
+if (!isset($_SESSION['allow'])){
+	if ($_SERVER['PHP_SELF'] != '/phpClassifieds/class/login.php'){
+		header('Location:login.php');
+	}
 }
 else {
 	echo "fuck this,im out";
