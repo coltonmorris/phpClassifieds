@@ -118,6 +118,7 @@ body {
 	background-image: linear-gradient(to top, #BF0534 0%, #830D11 100%);
 	border:2px solid #d83526;
 	border-right:none;
+	border-top:none;
 	border-bottom-left-radius:20px;
 	width: 151px;
 	height: 30px;
@@ -130,6 +131,7 @@ body {
 	text-decoration:none;
 	margin-top:auto;
 	margin-bottom:auto;
+	padding-top:20px;
 	padding-left:30px;
 }
 .logoutbutton a:hover{
@@ -206,6 +208,7 @@ logoutbutton a:active{
 	min-width:960px;
 	box-shadow: 0 0 15px 0px #2A3F55;
 	background-color:#fff;
+	max-width:1285px;
 	/*border-radius:5px;*/
 }
 
