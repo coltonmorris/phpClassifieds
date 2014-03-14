@@ -6,7 +6,7 @@
 <body>
 <div id="wrapper">
         <div id="navwrapper">
-            <a href="index.html"><img src="DSULogo.png" id="homebutton" alt="DIXIE Classifieds"></a>
+            <a href="index.php"><img src="images/logo.png" id="homebutton" alt="DIXIE Classifieds"></a>
             <nav id="nav">
                 <a href="index.php" alt="" class="buttons">Home</a>
                 <a href="listings.php" alt="" class="buttons" id="level2button">Listings</a>

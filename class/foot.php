@@ -9,6 +9,7 @@
             </ul>
         </div>
         <div class="columnb">
+        	<div class="logged">
 			<?php 
 			if (isset($_SESSION['username'])){
 			echo $_SESSION['username'] ." you are logged in";
@@ -17,6 +18,7 @@
 				echo "not working";
 			}
 			?>
+            </div>
         </div>
     
     </div><!--close foot wrapper-->
