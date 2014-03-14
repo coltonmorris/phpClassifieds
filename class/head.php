@@ -30,6 +30,9 @@ if (!isset($_SESSION['allow'])){
                 <a href="about.php" alt="" class="buttons" id="level3button">About</a>
             </nav>
         </div>
+        
+        <!--I want a php if statement that checks if we are logged in before displaying these buttons -->
+        
         <div class="logoutbutton">
             	<a href="logout.php">Logout</a>
         </div>
