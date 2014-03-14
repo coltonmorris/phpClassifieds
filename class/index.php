@@ -20,46 +20,22 @@
         });
 </script>
 <div class="content">
-<!-- open column div. open listhead div. catagory is in listheads.
-		close listhead. open subcats ul. each subcatagory is in <li></li>
-		close ul. close column.
--->
 <?php 
 $query = "select name from catagories";
 $results = do_query($query);
 show_catagories($results);
-function show_catagories($results) {
-	//loop through each catagory
-	while ($row = mysqli_fetch_row($results)){
-		echo "<div class='column'>";
-			echo "<div class='listheads'>";
-				echo $row[0]; //catagory name
-			echo "</div>"; //close listhead
-			echo "<ul class='subcats'>";
-			//loop through each subcatagory now
-			$query = "select name from subcatagories where parent = '$row[0]'";
-			$subresults = do_query($query);
-			while ($sub = mysqli_fetch_row($subresults)){
-				echo "<li>";
-				echo $sub[0];
-				echo "</li>";
-			}
-			echo "</ul>";
-		echo "</div>";
-	}
-}
 ?>
 <!--
 	<div class="column">
 				<div class="listheads">
 						Electronics
-				</div><!--close a listhead-->
+				</div>
 						<ul class="subcats">
 							<li>Phones</li>
 							<li>Tablets</li>
 							<li>Computers and stuff</li>
 						</ul>
-	</div><!--close the column-->
+	</div>
 				<div class="column">
 					<div class="listheads">
 						Appliances
@@ -81,7 +57,7 @@ function show_catagories($results) {
 						</ul>
 				</div>
 				<br id="clear">
-				-->
+-->
 </div>
 
 <?php include_once('foot.php'); ?>
