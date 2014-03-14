@@ -1,6 +1,6 @@
 <?php include_once('head.php'); 
 
-$query = "select * from jobs";
+$query = "select * from listings";
 $results = do_query($query);
 show_table($results);
 
