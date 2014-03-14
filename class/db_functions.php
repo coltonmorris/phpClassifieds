@@ -12,7 +12,7 @@ function do_query($query){
 }
 
 function show_job_admin($results) {
-    echo "<table border=1>";
+    echo "<table>";
     while ($row = mysqli_fetch_assoc($results)) {
         echo "<tr>";
         foreach ($row as $k => $val) {
@@ -32,7 +32,7 @@ function show_job_admin($results) {
     echo "</table>";
 }
 function show_user_admin($results) {
-    echo "<table border=1>";
+    echo "<table>";
     while ($row = mysqli_fetch_assoc($results)) {
         echo "<tr>";
         foreach ($row as $k => $val) {
