@@ -1,3 +1,4 @@
-push:
+run:
 	git add -u
-	git commit -m "testing"
+	git commit -m "force login"
+	git push
