@@ -10,6 +10,7 @@ if (!isset($_SESSION['allow'])){
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+<meta charset="utf-8">
 <title>DSU Classifieds</title>
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="bjqs.css">
