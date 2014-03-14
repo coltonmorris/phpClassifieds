@@ -16,18 +16,17 @@
 				?>
 			</select><br/>
 		Subcatagory:<select name ="subcatagory">
+			 <?php 
+			 	//parent should be the currently selected option in the catagory select
+				$query = "select name from subcatagories where parent='Textbooks'";
+				$results = do_query($query);
+				while ($row = mysqli_fetch_row($results)){
+					echo "$row[0]:<option value='$row[0]'>$row[0]</option>";
+					} 
+				?>
 			</select><br/>
 		<input type="submit" name="submit" value="Post Ad">
 	</p>
 </form>
-			 <?php 
-			 	//parent should be the currently selected option in the catagory select
-				$query = "select name from catagories where parent='Textbooks'";
-				$results = do_query($query);
-				while ($row = mysqli_fetch_row($results)){
-					//echo "$row[0]:<option value='$row[0]'>$row[0]</option>";
-					print_r ($row);
-					} 
-				?>
 </div> <!-- end middlecolumn -->
 <?php include_once('foot.php') ?>
