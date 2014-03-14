@@ -1,8 +1,7 @@
 <?php session_start(); 
 if (!isset($_SESSION['allow'])){
 	if ($_SERVER['PHP_SELF'] != '/phpClassifieds/class/login.php'){
-		echo "test";
-		header('Location: /phpClassifieds/class/login.php');
+		header('Location: http://www.ataxicdesign.com/phpClassifieds/class/login.php');
 	}
 }
 ?>
