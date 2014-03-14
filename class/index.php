@@ -12,7 +12,7 @@
         jQuery(document).ready(function($) {
 
           $('#banner-fade').bjqs({
-            height      : 400,
+            height      : 600,
             width       : $('#wrapper').width(),
             responsive  : true
           });
