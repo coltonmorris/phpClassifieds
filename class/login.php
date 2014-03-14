@@ -2,6 +2,7 @@
 if(isset($_POST['login'])){
 	//set RoleID  1=admin 
 	//login starts a session
+	include_once('db_functions');
 	login($_POST['username'],$_POST['password']);
 	if ($_SESSION['badlogin'] == false){
 		header('Location: http://www.ataxicdesign.com/phpClassifieds/class/index.php');
@@ -9,9 +10,9 @@ if(isset($_POST['login'])){
 	}
 }
 include_once('head.php');
-//if ($_SESSION['badlogin'] == true){
-//	echo "Your username or password was incorrect";
-//}
+if ($_SESSION['badlogin'] == true){
+	echo "Your username or password was incorrect";
+}
 
 ?>
 
