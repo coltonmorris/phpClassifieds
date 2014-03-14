@@ -29,7 +29,7 @@ $query = "select name from catagories";
 $results = do_query($query);
 show_catagories($results);
 function show_catagories($results) {
-	while $row = mysqli_fetch_row($results)){
+	while (($row = mysqli_fetch_row($results)){
 		echo $row[0];
 	}
 }
