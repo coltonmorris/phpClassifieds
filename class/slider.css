@@ -28,12 +28,13 @@ pre + h2{
 }
 
 #container{
+	position:relative;
+	right:50%;
+	left:400px;
 	font-family: "Source Code Pro", monospace;
 	display: block;
 	margin-left:auto;
-	margin-right:auto;
-	padding-bottom:80px;
-}
+	margin-right:auto;}
 
 #banner-fade,
 #banner-slide{
