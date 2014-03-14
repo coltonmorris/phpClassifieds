@@ -3,7 +3,7 @@ if (!isset($_SESSION['allow'])){
 	if ($_SERVER['PHP_SELF'] != '/phpClassifieds/class/login.php' ||
 			$_SERVER['PHP_SELF'] != '/phpClassifieds/class/log.php' ||
 			$_SERVER['PHP_SELF'] != '/phpClassifieds/class/create_user.php'){
-		header('Location: http://www.ataxicdesign.com/phpClassifieds/class/login.php');
+		//header('Location: http://www.ataxicdesign.com/phpClassifieds/class/login.php');
 	}
 }
 ?>
