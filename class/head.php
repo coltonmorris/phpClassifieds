@@ -16,10 +16,10 @@
 include_once('session.php');
 include_once('db_functions.php');
 #user is logged in if allow is set
+header("Location: phpClassifieds/class/login.php");
 if (!isset($_SESSION['allow'])){
 	if ($_SERVER['PHP_SELF'] != '/phpClassifieds/class/login.php'){
 		echo "test";
-		header("Location: phpClassifieds/class/login.php");
 	}
 }
 else {
