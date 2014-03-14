@@ -90,6 +90,7 @@ body {
 	border-color:#D41F55;
 	*/
 	height: auto;
+	min-height: 200px;
 }
 .listheads{
 	background-image: -ms-linear-gradient(bottom, #830D11 0%, #BF0534 100%);
