@@ -32,9 +32,11 @@ if (!isset($_SESSION['allow'])){
         </div>
         
         <!--I want a php if statement that checks if we are logged in before displaying these buttons -->
-        
+        <div class="postbutton">
+        	<a href="post.php">Post and Ad</a>
+        </div>
         <div class="logoutbutton">
-            	<a href="logout.php">Logout</a>
+        	<a href="logout.php">Logout</a>
         </div>
 <?php
 include_once('session.php');
