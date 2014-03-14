@@ -30,6 +30,9 @@ if (!isset($_SESSION['allow'])){
                 <a href="about.php" alt="" class="buttons" id="level3button">About</a>
             </nav>
         </div>
+        <div class="logoutbutton">
+            	<a href="logout.php">Logout</a>
+            </div>
 <?php
 include_once('session.php');
 include_once('db_functions.php');
