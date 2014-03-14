@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<?php session_start(); ?>
 <html lang="en">
 <title>DSU Classifieds</title>
 <link rel="stylesheet" href="main.css">
