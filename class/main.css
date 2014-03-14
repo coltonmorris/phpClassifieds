@@ -117,7 +117,6 @@ body {
 	background-image: -webkit-linear-gradient(bottom, #BF0534 0%, #830D11 100%);
 	background-image: linear-gradient(to top, #BF0534 0%, #830D11 100%);
 	border:2px solid #d83526;
-	border-top:none;
 	border-right:none;
 	border-bottom-left-radius:20px;
 	width: 151px;
