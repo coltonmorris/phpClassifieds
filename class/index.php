@@ -1,5 +1,5 @@
 <?php include_once('head.php'); ?>
-<div>
+<div id="container">
 	<div id="banner-fade">
     	<ul class="bjqs">
         	<li><img src="http://images.universityherald.com/data/images/full/4147/dixie-state-university.jpg?w=600" title="DSU"></li>
