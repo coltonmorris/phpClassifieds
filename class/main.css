@@ -64,8 +64,8 @@ body {
 	color: #fff;
 	text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff;
 	
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00) );
-	background:-moz-linear-gradient( center top, #ce0100 5%, #fe1a00 100% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #BF0534) );
+	background:-moz-linear-gradient( center top, #ce0100 5%, #BF0534 100% );
 	-webkit-transition: 500ms linear 0s;
 	-moz-transition: 500ms linear 0s;
 	-o-transition: 500ms linear 0s;
