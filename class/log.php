@@ -5,7 +5,9 @@
 if(isset($_POST['login'])){
 	//set RoleID  1=admin 
 	//login starts a session
-	echo login($_POST['username'],$_POST['password']);
+	login($_POST['username'],$_POST['password']);
+	header('Location: http://www.ataxicdesign.com/phpClassifieds/class/index.php');
+	exit();
 }
 ?>
 </p>
