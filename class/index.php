@@ -1,4 +1,24 @@
 <?php include_once('head.php'); ?>
+<div>
+	<div id="banner-fade">
+    	<ul class="bjqs">
+        	<li><img src="http://images.universityherald.com/data/images/full/4147/dixie-state-university.jpg?w=600" title="DSU"></li>
+            <li><img src="http://dixie.edu/commencement/Image/DSC_Grad261.jpg" title="Graduates"></li>
+            <li><img src="http://mediad.publicbroadcasting.net/p/kuer/files/201302/UT-Capitol-Stock-06.jpg" title="Capitol"></li>
+        </ul>
+    </div>
+</div>
+<script class="secret-source">
+        jQuery(document).ready(function($) {
+
+          $('#banner-fade').bjqs({
+            height      : 400,
+            width       : 800,
+            responsive  : true
+          });
+
+        });
+      </script>
 <div class="content">
 	<div class="column">
             <div class="listheads">
