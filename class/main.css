@@ -127,7 +127,7 @@ body {
 	clear:both;
 }
 #homebutton{
-	height:90px;
+	width: 50%;
 	padding-top:5px;
 	padding-left: 15px;
 	float:left;
