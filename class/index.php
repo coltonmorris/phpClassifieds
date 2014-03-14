@@ -29,13 +29,21 @@ $query = "select name from catagories";
 $results = do_query($query);
 show_catagories($results);
 function show_catagories($results) {
+	//loop through each catagory
 	while ($row = mysqli_fetch_row($results)){
-		echo $row[0];
+		//echo "<div class='column'>";
+			//echo "<div class='listheads'>";
+				echo $row[0]; //catagory name
+			//echo "</div>" //close listhead
+			//echo "<ul class='subcats'>";
+			//loop through each subcatagory now
+			$query = "select name from subcatagories where parent = '$row[0]'";
+			$subresults = do_query($query);
+			while ($sub = mysqli_fetch_row($subresults)){
+				echo $sub[0];
+			}
 	}
 }
-//		echo "<div class='column'>";
-//			echo "<div class='listheads'>";
-//				echo $
 ?>
 	<div class="column">
 				<div class="listheads">
