@@ -1,8 +1,15 @@
-<?php include_once('head.php'); ?>
+<?php
+include_once('head.php');
+if(isset($_POST['login'])){
+	//set RoleID  1=admin 
+	//login starts a session
+	echo login($_POST['username'],$_POST['password']);
+}
+?>
 
 <!-- login form -->
 <div id="middlecolumn">
-<form action="log.php" method="POST">
+<form action="login.php" method="POST">
 	<p>
 		Username:<input type="text" name="username"><br/>
 		Password:<input type="password" name="password"><br/>
