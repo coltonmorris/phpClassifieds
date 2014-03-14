@@ -56,8 +56,8 @@ show_catagories($results);
 								<li>American <del>toys</del> cars</li>
 						</ul>
 				</div>
-				<br id="clear">
 -->
+				<br id="clear">
 </div>
 
 <?php include_once('foot.php'); ?>

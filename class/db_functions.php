@@ -27,8 +27,8 @@ function show_catagories($results) {
 				echo $sub[0];
 				echo "</li>";
 			}
-			echo "</ul>";
-		echo "</div>";
+			echo "</ul>"; 
+		echo "</div>"; //close column
 	}
 }
 function show_job_admin($results) {
