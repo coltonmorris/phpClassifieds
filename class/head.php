@@ -16,8 +16,8 @@
 include_once('session.php');
 include_once('db_functions.php');
 #user is logged in if allow is set
-if (!isset($_SESSION['allow'])){
-	echo "hello world";
+if (!isset($_SESSION['allow']) ){
+	echo $_SERVER['PHP_SELF'];
 }
 else {
 	echo "fuck this,im out";
