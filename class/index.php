@@ -13,7 +13,7 @@
 
           $('#banner-fade').bjqs({
             height      : 400,
-            width       : 800,
+            width       : $('#wrapper').width(),
             responsive  : true
           });
 
