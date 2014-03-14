@@ -116,17 +116,22 @@ body {
 	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #BF0534), color-stop(1, #830D11));
 	background-image: -webkit-linear-gradient(bottom, #BF0534 0%, #830D11 100%);
 	background-image: linear-gradient(to top, #BF0534 0%, #830D11 100%);
-	width: 100px;
+	border:2px solid #d83526;
+	border-top:none;
+	border-right:none;
+	border-bottom-left-radius:20px;
+	width: 151px;
 	height: 30px;
 	float:right;
 	position: relative;
-	text-align:right;
 	z-index:1;
 }
 .logoutbutton a{
 	color:#ffffff;
 	text-decoration:none;
-	padding: 2px 0 2px 4px;
+	margin-top:auto;
+	margin-bottom:auto;
+	padding-left:30px;
 }
 .logoutbutton a:hover{
 	-webkit-transition: 500ms linear 0s;
