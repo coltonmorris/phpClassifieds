@@ -1,5 +1,14 @@
 <!DOCTYPE HTML>
-<?php session_start(); ?>
+<?php session_start(); 
+if (!isset($_SESSION['allow'])){
+	if ($_SERVER['PHP_SELF'] != '/phpClassifieds/class/login.php'){
+		header('Location: login.php');
+		header('Location: /phpClassifieds/class/login.php');
+		header('Location: phpClassifieds/class/login.php');
+		echo "test";
+	}
+}
+?>
 <html lang="en">
 <title>DSU Classifieds</title>
 <link rel="stylesheet" href="main.css">
@@ -17,16 +26,4 @@
 include_once('session.php');
 include_once('db_functions.php');
 #user is logged in if allow is set
-if (!isset($_SESSION['allow'])){
-	if ($_SERVER['PHP_SELF'] != '/phpClassifieds/class/login.php'){
-		header('Location: login.php');
-		header('Location: /phpClassifieds/class/login.php');
-		header('Location: phpClassifieds/class/login.php');
-		echo "test";
-	}
-}
-else {
-	echo "fuck this,im out";
-}
-
 ?>

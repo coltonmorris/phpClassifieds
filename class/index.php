@@ -1,5 +1,4 @@
-<?php include_once('head.php'); 
-	header('Location: login.php');?>
+<?php include_once('head.php'); ?>
 <div class="content">
 	<div class="column">
             <div class="listheads">
