@@ -16,6 +16,10 @@
 				?>
 			</select><br/>
 		Subcatagory:<select name ="subcatagory">
+			</select><br/>
+		<input type="submit" name="submit" value="Post Ad">
+	</p>
+</form>
 			 <?php 
 			 	//parent should be the currently selected option in the catagory select
 				$query = "select name from catagories where parent='Textbooks'";
@@ -25,9 +29,5 @@
 					print_r ($row);
 					} 
 				?>
-			</select><br/>
-		<input type="submit" name="submit" value="Post Ad">
-	</p>
-</form>
 </div> <!-- end middlecolumn -->
 <?php include_once('foot.php') ?>
