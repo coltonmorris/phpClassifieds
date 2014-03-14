@@ -28,7 +28,7 @@ pre + h2{
 }
 
 #container{
-	width:90%px;
+	width:100%;
 	height:500px;
 	font-family: "Source Code Pro", monospace;
 	display: block;

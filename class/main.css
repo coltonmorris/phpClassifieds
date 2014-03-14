@@ -112,6 +112,10 @@ body {
 .logoutbutton{
 	z-index:2;
 }
+.postbutton{
+	left:16px;
+	z-index:1;	
+}
 .logoutbutton, .postbutton{
 	background-image: -ms-linear-gradient(bottom, #BF0534 0%, #830D11 100%);
 	background-image: -moz-linear-gradient(bottom, #BF0534 0%, #830D11 100%);
@@ -151,10 +155,6 @@ body {
 .logoutbutton a:active, postbutton a:active{
 	position:relative;
 	top:2px;
-}
-.postbutton{
-	left:16px;
-	z-index:1;	
 }
 .subcats{
 	text-align:left;
@@ -223,7 +223,7 @@ body {
 
 #middlecolumn {
 	padding-left:2px;
-	font:Arial (0,0,0);
+	font:Arial;
 	width: 600px;
 	margin:80px auto;
 }
