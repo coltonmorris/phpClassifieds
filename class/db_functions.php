@@ -173,11 +173,11 @@ function login($username,$password){
 			$filename = "admin_control.php";
 		}
 		$_SESSION['control_panel'] = $filename;
-		$info = "$username, you are logged in";
+		header('http://www.ataxicdesign.com/phpClassifieds/class/index.php');
+		//$info = "$username, you are logged in";
 	}
 	else { 
-		$info = "Username or Password is incorrect";
+		echo "Username or Password is incorrect";
 	}
-	return $info;
 }
 ?>
