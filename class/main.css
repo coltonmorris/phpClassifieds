@@ -119,12 +119,13 @@ body {
 	border:2px solid #d83526;
 	border-right:none;
 	border-top:none;
-	border-bottom-left-radius:20px;
+	border-bottom-left-radius:10px;
 	width: 151px;
 	height: 30px;
 	float:right;
 	position: relative;
 	z-index:1;
+	text-indent:31.71px;
 }
 .logoutbutton a, .postbutton a{
 	font-family:Arial;
@@ -136,7 +137,6 @@ body {
 	margin-top:auto;
 	margin-bottom:auto;
 	padding-top:20px;
-	text-indent:-31.71px;
 }
 .logoutbutton a:hover, postbutton a:hover{
 	-webkit-transition: 500ms linear 0s;
@@ -150,7 +150,9 @@ body {
 	position:relative;
 	top:2px;
 }
-.postbutton{	
+.postbutton{
+	left:16px;
+	z-index:0;	
 }
 .subcats{
 	text-align:left;
