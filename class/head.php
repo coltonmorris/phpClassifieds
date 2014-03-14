@@ -1,7 +1,13 @@
 <?php session_start(); 
 if (!isset($_SESSION['allow'])){
 	if ($_SERVER['PHP_SELF'] != '/phpClassifieds/class/login.php'){
+<<<<<<< HEAD
 		header('Location: http://www.ataxicdesign.com/phpClassifieds/class/login.php');
+=======
+		echo "test";
+		header('Location: http://ataxicdesign.com/phpClassifieds/class/login.php');
+		die();
+>>>>>>> 88eb8d51a6d8f04e86a63b4d65ef326b0a92f378
 	}
 }
 ?>
