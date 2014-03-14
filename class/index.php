@@ -29,8 +29,8 @@ $query = "select name from catagories";
 $results = do_query($query);
 show_catagories($results);
 function show_catagories($results) {
-	$row = mysqli_fetch_row($results)
-	print_r( $row );
+	$row = mysqli_fetch_row($results);
+	print_r ($row);
 }
 //		echo "<div class='column'>";
 //			echo "<div class='listheads'>";
