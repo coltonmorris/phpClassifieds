@@ -12,8 +12,8 @@
         jQuery(document).ready(function($) {
 
           $('#banner-fade').bjqs({
-            height      : 600,
-            width       : $('#wrapper').width(),
+            height      : $('#container').height(),
+            width       : $('#container').width(),
             responsive  : true
           });
 
