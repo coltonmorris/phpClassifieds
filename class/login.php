@@ -2,7 +2,7 @@
 if(isset($_POST['login'])){
 	//set RoleID  1=admin 
 	//login starts a session
-	include_once('db_functions');
+	include_once('db_functions.php');
 	login($_POST['username'],$_POST['password']);
 	if ($_SESSION['badlogin'] == false){
 		header('Location: http://www.ataxicdesign.com/phpClassifieds/class/index.php');
