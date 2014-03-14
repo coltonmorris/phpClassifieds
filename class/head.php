@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <?php session_start(); 
 if (!isset($_SESSION['allow'])){
 	if ($_SERVER['PHP_SELF'] != '/phpClassifieds/class/login.php'){
@@ -7,6 +6,7 @@ if (!isset($_SESSION['allow'])){
 	}
 }
 ?>
+<!DOCTYPE HTML>
 <html lang="en">
 <title>DSU Classifieds</title>
 <link rel="stylesheet" href="main.css">
