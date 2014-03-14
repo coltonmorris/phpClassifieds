@@ -9,9 +9,9 @@ if(isset($_POST['login'])){
 	}
 }
 include_once('head.php');
-if ($_SESSION['badlogin'] == true){
-	echo "Your username or password was incorrect";
-}
+//if ($_SESSION['badlogin'] == true){
+//	echo "Your username or password was incorrect";
+//}
 
 ?>
 
