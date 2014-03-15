@@ -27,7 +27,7 @@
             });
 		</script>
 		<label for="catagory">*Category:</label>
-        <select name ="catagory" required id="cSelect">
+        <select name ="catagory" required id="cSelect" size="32">
 				<!-- this list will be pulled from the database -->
              <option></option>
 			 <?php 
@@ -39,7 +39,7 @@
 				?>
 		</select><br><br>
 		<label for="subcatagory">*Subcategory:</label>
-        <select name ="subcatagory" required id="subcats">
+        <select name ="subcatagory" required id="subcats" size="32">
 			 	<!--//parent='blank' should be the currently selected option in the catagory select field
 				
 				//we need a for loop that grabs every single subcategory and puts them in there
