@@ -1,4 +1,5 @@
 <?php
+include_once('db_functions.php');
 $parent = $_POST['selected'];
 $query = "select name from subcatagories where parent='$parent'";
 $results = do_query($query);
