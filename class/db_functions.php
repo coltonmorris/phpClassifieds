@@ -32,7 +32,7 @@ function show_catagories($results) {
 	}
 }
 function show_job_admin($results) {
-    echo "<table>";
+    echo "<table class='listing'>";
     while ($row = mysqli_fetch_assoc($results)) {
         echo "<tr>";
         foreach ($row as $k => $val) {
