@@ -17,7 +17,7 @@
                     $.ajax({
                         type: "POST",
                         url: "subcat.php", // "another_php_file.php",
-                        data: 'theOption=' + sel,
+                        data: 'selected=' + sel,
                         success: function(data) {
 						alert('Server-side response: ' + data);
                             $('#subcats').html(data);
@@ -39,11 +39,12 @@
 		</select><br><br>
 		<label for="subcatagory">*Subcategory:</label>
         <select name ="subcatagory" required id="subcats">
-			 	//parent='blank' should be the currently selected option in the catagory select field
+			 	<!--//parent='blank' should be the currently selected option in the catagory select field
 				
 				//we need a for loop that grabs every single subcategory and puts them in there
 				//Make sure that there is a <optgroup> that wraps sub cats, ie
 				//	<optgroup name=
+                -->
 		</select><br><br>
 		<label for="images">Images: </label>
         <input type="file" name="images" accept="image/*"><br><br>
