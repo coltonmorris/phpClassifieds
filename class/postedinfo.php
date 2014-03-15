@@ -1,7 +1,6 @@
 <?php include_once('head.php') ?>
 <div id="middlecolumn">
-<p>
-	Thank you for posting your ad! Hopefully some shmuck will fall for your scam. TROLOLol0l.
+	Thank you for posting an ad!
 
 <?php
 //content with quotes buggs table
@@ -23,6 +22,5 @@ $query = "insert into listings (catagory, subcatagory,username,
 					'$cost',$image_count,'$base_image')";
 $results = do_query($query);
 ?>
- </p>
 </div> <!-- end middlecolumn -->
 <?php include_once('foot.php') ?>
