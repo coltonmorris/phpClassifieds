@@ -1,11 +1,15 @@
 <?php include_once('head.php') ?>
 <div id="middlecolumn">
 <form action="postedinfo.php" method="POST">
-	<p>
-		Subject: <input type="text" name="subject"><br/>
-		Description: <textarea name="description" cols="65" rows="10"></textarea>
-		Cost: <input type="text" name="cost"><br/>
-		Catagory:<select name ="catagory">
+	<div>
+		<label for="subject">Subject:</label> 
+        <input type="text" name="subject"><br><br>
+		<label for="description">Description: </label>
+        <textarea name="description" cols="60" rows="5"></textarea><br><br>
+		<label for="cost">Cost: </label>
+        <input type="text" name="cost"><br><br>
+		<label for="category"> Category:</label>
+        <select name ="category">
 				<!-- this list will be pulled from the database -->
 			 <?php 
 				$query = "select name from catagories";
@@ -14,8 +18,9 @@
 					echo "$row[0]:<option value='$row[0]'>$row[0]</option>";
 					} 
 				?>
-			</select><br/>
-		Subcatagory:<select name ="subcatagory">
+		</select><br><br>
+		<label for="subcategory">Subcategory:</label>
+        <select name ="subcategory">
 			 <?php 
 			 	//parent='blank' should be the currently selected option in the catagory select field
 				$query = "select name from subcatagories where parent='Textbooks'";
@@ -24,10 +29,11 @@
 					echo "$row[0]:<option value='$row[0]'>$row[0]</option>";
 					} 
 				?>
-			</select><br/>
-		Images: <input type="file" name="images" accept="image/*"><br/>
+		</select><br><br>
+		<label for="images">Images: </label>
+        <input type="file" name="images" accept="image/*"><br><br>
 		<input type="submit" name="submit" value="Post Ad">
-	</p>
+	</div>
 </form>
 </div> <!-- end middlecolumn -->
 <?php include_once('foot.php') ?>
