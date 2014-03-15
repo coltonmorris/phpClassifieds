@@ -19,6 +19,7 @@ if (!isset($_SESSION['allow'])){
 <!-- load jQuery and the plugin -->
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="js/bjqs-1.3.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <link rel="shortcut icon" href="images/favicon.ico">
 </head>
 <body>
