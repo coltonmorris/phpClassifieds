@@ -118,6 +118,9 @@ label{
 	padding:10px;
 	border-color:transparent;
 }
+.listing tr{
+	padding:2px;
+}
 .logoutbutton{
 	z-index:2;
 }
