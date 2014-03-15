@@ -5,14 +5,23 @@
 
 <?php
 //content with quotes buggs table
+$catagory = $_POST['catagory'];
+$subcatagory = $_POST['subcatagory'];
 $username = $_SESSION['username'];
-$content = "SUBJECT: $_POST[Subject] ";
-$content .= "DESCRIPTION: $_POST[Description] ";
-$content .= "COST: $_POST[Cost] ";
-$content .= "CATEGORY: $_POST[Category] ";
-$query = "insert into jobs (username,description) values ('$username','$content')";
+$subject = $_POST['subject'];
+$description =$_POST['description'];
+$cost = $_POST['cost'];
+//images needs work and research :D
+//planning on the base image being their username+id+index
+//for example: images/colton0201 through images/colton0204
+//if image count was 4.
+$image_count = 1;
+$base_image = $_POST['images'];
+$query = "insert into listings (catagory, subcatagory,username,
+					subject,description,cost,image_count,base_image) values (
+					'$catagory','$subcatagory','$username','$subject','$description',
+					'$cost',$image_count,'$base_image')";
 $results = do_query($query);
-show_table($results);
 ?>
  </p>
 </div> <!-- end middlecolumn -->

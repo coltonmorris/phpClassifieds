@@ -17,7 +17,7 @@
 			</select><br/>
 		Subcatagory:<select name ="subcatagory">
 			 <?php 
-			 	//parent should be the currently selected option in the catagory select
+			 	//parent='blank' should be the currently selected option in the catagory select field
 				$query = "select name from subcatagories where parent='Textbooks'";
 				$results = do_query($query);
 				while ($row = mysqli_fetch_row($results)){
@@ -25,6 +25,7 @@
 					} 
 				?>
 			</select><br/>
+		Images: <input type="file" name="images" accept="image/*"><br/>
 		<input type="submit" name="submit" value="Post Ad">
 	</p>
 </form>

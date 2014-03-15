@@ -39,7 +39,7 @@ if (isset($_SESSION['username'])){
 	echo "<a href='logout.php'>Logout</a>";
 	echo "</div>";
 	echo "<div class='postbutton'>";
-	echo "<a href='post.php'>Post and Ad</a>";
+	echo "<a href='post.php'>Post an Ad</a>";
 	echo "</div>";
 }
 include_once('session.php');
