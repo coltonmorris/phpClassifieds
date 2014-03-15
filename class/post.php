@@ -10,7 +10,7 @@
         <input type="text" required name="cost"><br><br>
         <script type="text/javascript">
 			$(document).ready(function() {
-				//alert('Document is ready');
+				alert('Document is ready');
                 $('#cSelect').change(function() {
                     var sel = $(this).val();
 					//alert('You picked: ' + sel);
@@ -19,7 +19,7 @@
                         url: "subcat.php", // "another_php_file.php",
                         data: 'selected=' + sel,
                         success: function(data) {
-						//alert('Server-side response: ' + data);
+						alert('Server-side response: ' + data);
                             $('#subcats').html(data);
                         }
                     });
@@ -29,7 +29,6 @@
 		<label for="catagory">*Category:</label>
         <select name ="catagory" required id="cSelect" size="32">
 				<!-- this list will be pulled from the database -->
-             <option></option>
 			 <?php 
 				$query = "select name from catagories";
 				$results = do_query($query);
