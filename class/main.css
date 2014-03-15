@@ -79,6 +79,9 @@ label{
 	/*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00');
 	background-color:#ce0100*/
 }
+.catsize{
+	width:100px;
+}
 .content{
 	min-width:470px;
 	width:100%;
