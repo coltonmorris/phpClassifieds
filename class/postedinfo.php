@@ -9,7 +9,7 @@ $subcatagory = $_POST['subcatagory'];
 $username = $_SESSION['username'];
 $subject = $_POST['subject'];
 $description =$_POST['description'];
-$cost = $_POST['cost'];
+$cost = "$".$_POST['cost'];
 //images needs work and research :D
 //planning on the base image being their username+id+index
 //for example: images/colton0201 through images/colton0204
