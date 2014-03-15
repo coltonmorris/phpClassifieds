@@ -116,7 +116,7 @@ label{
 }
 .listing{
 	padding:10px;
-	border-color:transparent;
+	border-color:#000;
 }
 .listing td{
 	padding:5px 1px 5px 1px;
