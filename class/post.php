@@ -13,7 +13,7 @@
 				alert('Document is ready');
                 $('#cSelect').change(function() {
                     var sel = $(this).val();
-					alert('You picked: ' + sel);
+					//alert('You picked: ' + sel);
                     $.ajax({
                         type: "POST",
                         url: "subcat.php", // "another_php_file.php",
