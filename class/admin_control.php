@@ -7,7 +7,7 @@ if (!isset($_SESSION['control_panel']) || $_SESSION['control_panel'] != 'admin_c
 echo "<div class='listheads'>Listings</div>";
 $username = $_SESSION['username'];
 $password = $_SESSION['password'];
-$query = "select * from jobs";
+$query = "select * from listings";
 $results = do_query($query);
 show_job_admin($results);
 echo "<hr>";
