@@ -200,6 +200,12 @@ label{
 	border-top-right-radius:5px;
 	border-right:none;
 }
+#listings{
+	margin-left:auto;
+	margin-right:auto;
+	width:95%;
+	padding: 40px 5px 20px 5px;
+}
 #nav{
 	position:relative;
 	left: 40px;

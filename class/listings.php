@@ -1,7 +1,10 @@
-<?php include_once('head.php'); 
-
+<?php include_once('head.php');?>
+<div id="listings">
+<?php 
 $query = "select * from listings";
 $results = do_query($query);
 show_table($results);
+?>
+</div>
 
-include_once('foot.php'); ?>
+<?php include_once('foot.php'); ?>
