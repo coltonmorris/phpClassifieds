@@ -43,8 +43,8 @@ if ($image_count > 0){
 	}
 
 	echo $base_image;
-	$query = "update listings set image_count=$image_count, set base_image='$base_image' where id=$id";
-	$results = do_query($query);
+	//$query = "update listings set image_count=$image_count, set base_image='$base_image' where id=$id";
+	//$results = do_query($query);
 }
 
 ?>
