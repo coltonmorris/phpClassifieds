@@ -21,28 +21,29 @@ $results = do_query($query);
 $row = mysqli_fetch_row($results);
 $id = $row[0];
 
-echo $id;
-
 //planning on the base image being their username + listing id + index
 //for example: images/colton0201 through images/colton0204
 //if image count was 4.
 $image_count = count($_FILES['images']['name']);
-$base_image = $_POST['images'];
-for($i=0;$_FILES["images"]["name"][$i]==true;$i++) {
-	$fileName = $_FILES["images"]["name"][$i]; // The file name
-	$fileTmpLoc = $_FILES["images"]["tmp_name"][$i]; // File in the PHP tmp folder
-	$fileType = $_FILES["images"]["image/png||image/jpg"][$i];  // The type of file it is
-	$fileSize = $_FILES["images"]["size"][$i]; // File size in bytes
-	$fileErrorMsg = $_FILES["images"]["error"][$i]; // 0 = false | 1 = true
-	$kaboom = explode(".",$_FILES["images"]["name"][$i]); // Split file name into an array using the dot
-	$fileExt = end($kaboom); // Now target the last array element to get the file extension
+$fileName = "images/" . $username . $id;
+if ($image_count > 0){
+	$base_image = $_POST['images'];
+	for($i=0;$_FILES["images"]["name"][$i]==true;$i++) {
+		$fileName = $_FILES["images"]["name"][$i]; // The file name
+		$fileTmpLoc = $_FILES["images"]["tmp_name"][$i]; // File in the PHP tmp folder
+		$fileType = $_FILES["images"]["image/png||image/jpg"][$i];  // The type of file it is
+		$fileSize = $_FILES["images"]["size"][$i]; // File size in bytes
+		$fileErrorMsg = $_FILES["images"]["error"][$i]; // 0 = false | 1 = true
+		$kaboom = explode(".",$_FILES["images"]["name"][$i]); // Split file name into an array using the dot
+		$fileExt = end($kaboom); // Now target the last array element to get the file extension
+		$newfileName = $filename . $i;
+		$moveResult= move_uploaded_file($fileTmpLoc, "$newfileName");
+		unlink($fileTmpLoc); // Remove the uploaded file from the PHP temp folder
+	}
 
-	//$newfileName = $username . 
-	//$moveResult= move_uploaded_file($fileTmpLoc, "images/$fileName");
-	unlink($fileTmpLoc); // Remove the uploaded file from the PHP temp folder
+	$query = "update listings set image_count= $image_count, base_image = '$fileName' where id=$id";
+	$results = do_query($query);
 }
-echo $image_count;
-
 
 ?>
 </div> <!-- end middlecolumn -->
