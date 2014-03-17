@@ -25,7 +25,7 @@ $id = $row[0];
 //for example: images/colton0201 through images/colton0204
 //if image count was 4.
 $image_count = count($_FILES['images']['name']);
-$fileName = "images/" . $username . $id;
+$base_image = 'images/' . $username . $id;
 if ($image_count > 0){
 	$base_image = $_POST['images'];
 	for($i=0;$_FILES["images"]["name"][$i]==true;$i++) {
@@ -37,12 +37,12 @@ if ($image_count > 0){
 		$fileErrorMsg = $_FILES["images"]["error"][$i]; // 0 = false | 1 = true
 		$kaboom = explode(".",$_FILES["images"]["name"][$i]); // Split file name into an array using the dot
 		$fileExt = end($kaboom); // Now target the last array element to get the file extension
-		$newfileName = $filename . $i;
+		$newfileName = $base_image . $i;
 		$moveResult= move_uploaded_file($fileTmpLoc, "$newfileName");
 		unlink($fileTmpLoc); // Remove the uploaded file from the PHP temp folder
 	}
 
-	$query = "update listings set image_count=$image_count, set base_image = '$fileName' where id=$id";
+	$query = "update listings set image_count=$image_count, set base_image = '$base_image' where id=$id";
 	$results = do_query($query);
 }
 
