@@ -116,7 +116,7 @@ label{
 	text-decoration:none;
 	color: #fff;
 }
-.listheads a:hover{
+.listheads:hover{
 	color: #fff;
 	text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff;
 	
