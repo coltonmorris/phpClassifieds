@@ -18,7 +18,8 @@ $query = "insert into listings (catagory, subcatagory,username,
 $results = do_query($query);
 $query = "select id from listings where username='$username' and description='$description'";
 $results = do_query($query);
-$id = mysqli_fetch_row($results)[0];
+$row = mysqli_fetch_row($results);
+$id = $row[0];
 
 echo $id;
 
@@ -30,14 +31,14 @@ $base_image = $_POST['images'];
 for($i=0;$_FILES["images"]["name"][$i]==true;$i++) {
 	$fileName = $_FILES["images"]["name"][$i]; // The file name
 	$fileTmpLoc = $_FILES["images"]["tmp_name"][$i]; // File in the PHP tmp folder
-	$fileType = @$_FILES["images"]["image/png||image/jpg"][$i];  // The type of file it is
+	$fileType = $_FILES["images"]["image/png||image/jpg"][$i];  // The type of file it is
 	$fileSize = $_FILES["images"]["size"][$i]; // File size in bytes
 	$fileErrorMsg = $_FILES["images"]["error"][$i]; // 0 = false | 1 = true
 	$kaboom = explode(".",$_FILES["images"]["name"][$i]); // Split file name into an array using the dot
 	$fileExt = end($kaboom); // Now target the last array element to get the file extension
 
 	//$newfileName = $username . 
-	$moveResult= move_uploaded_file($fileTmpLoc, "images/$fileName");
+	//$moveResult= move_uploaded_file($fileTmpLoc, "images/$fileName");
 	unlink($fileTmpLoc); // Remove the uploaded file from the PHP temp folder
 }
 echo $image_count;
