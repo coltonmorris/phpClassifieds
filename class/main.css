@@ -144,8 +144,6 @@ label{
 	float:right;
 	position: relative;
 	text-indent:31.71px;
-}
-.logoutbutton a, .postbutton a{
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
@@ -155,8 +153,11 @@ label{
 	margin-top:auto;
 	margin-bottom:auto;
 	padding-top:20px;
+	display:inline-block;
+	width:100%;
+	height:100%;
 }
-.logoutbutton a:hover, .postbutton a:hover{
+.logoutbutton:hover, .postbutton:hover{
 	-webkit-transition: 500ms linear 0s;
 	-moz-transition: 500ms linear 0s;
 	-o-transition: 500ms linear 0s;
@@ -164,7 +165,7 @@ label{
 	color:#C8955B;
 	text-shadow:0 0 2px #FFF;
 }
-.logoutbutton a:active, .postbutton a:active{
+.logoutbutton:active, .postbutton:active{
 	position:relative;
 	top:2px;
 }
