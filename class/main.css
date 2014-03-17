@@ -180,8 +180,7 @@ label{
 
 }
 .logoutbutton:active, .postbutton:active{
-	position:relative;
-	top:2px;
+	/*no clue*/
 }
 .subcats{
 	text-align:left;
