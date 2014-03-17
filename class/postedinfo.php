@@ -36,7 +36,7 @@ for($i=0;$_FILES["images"]["name"][$i]==true;$i++) {
 	$kaboom = explode(".",$_FILES["images"]["name"][$i]); // Split file name into an array using the dot
 	$fileExt = end($kaboom); // Now target the last array element to get the file extension
 
-	$newfileName = $username . 
+	//$newfileName = $username . 
 	$moveResult= move_uploaded_file($fileTmpLoc, "images/$fileName");
 	unlink($fileTmpLoc); // Remove the uploaded file from the PHP temp folder
 }
