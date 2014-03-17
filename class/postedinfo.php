@@ -44,8 +44,8 @@ if ($image_count > 0){
 	echo gettype($base_image);
 	echo $newfileName . ":";
 	echo gettype($newfileName);
-	//$query = "update listings set image_count=$image_count, base_image='$base_image' where id=$id";
-	//$results = do_query($query);
+	$query = "update listings set image_count=$image_count, base_image='$base_image' where id=$id";
+	$results = do_query($query);
 }
 
 ?>
