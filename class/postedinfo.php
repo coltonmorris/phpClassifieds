@@ -27,7 +27,6 @@ $id = $row[0];
 $image_count = count($_FILES['images']['name']);
 $base_image = 'images/' . $username . "$id";
 if ($image_count > 0){
-	$base_image = $_POST['images'];
 	for($i=0;$_FILES["images"]["name"][$i]==true;$i++) {
 		$fileName = $_FILES["images"]["name"][$i]; // The file name
 		$fileTmpLoc = $_FILES["images"]["tmp_name"][$i]; // File in the PHP tmp folder
