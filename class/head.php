@@ -36,12 +36,8 @@ if (!isset($_SESSION['allow'])){
         <!--I want a php if statement that checks if we are logged in before displaying these buttons -->
 <?php
 if (isset($_SESSION['username'])){
-	echo "<div class='logoutbutton'>";
-	echo "<a href='logout.php'>Logout</a>";
-	echo "</div>";
-	echo "<div class='postbutton'>";
-	echo "<a href='post.php'>Post an Ad</a>";
-	echo "</div>";
+	echo "<a href='logout.php' class='logoutbutton'>Logout</a>";
+	echo "<a href='post.php' class='postbutton'>Post an Ad</a>";
 }
 include_once('session.php');
 include_once('db_functions.php');
