@@ -26,6 +26,7 @@ $id = $row[0];
 $image_count = count($_FILES['images']['name']);
 //planning on the base image being their listing id + username + index
 $base_image = 'images/' . "$id" . $username;
+//upload files
 if ($image_count > 0){
 	for($i=0;$_FILES["images"]["name"][$i]==true;$i++) {
 		$fileName = $_FILES["images"]["name"][$i]; // The file name
@@ -40,14 +41,12 @@ if ($image_count > 0){
 		$moveResult= move_uploaded_file($fileTmpLoc, "$newfileName");
 		unlink($fileTmpLoc); // Remove the uploaded file from the PHP temp folder
 	}
-	echo $base_image . ":";
-	echo gettype($base_image);
-	echo $newfileName . ":";
-	echo gettype($newfileName);
-	$query = "update listings set image_count=$image_count, base_image='$base_image' where id=$id";
-	$results = do_query($query);
 }
+//update listing to include the base filename and image count
+$query = "update listings set image_count=$image_count, base_image='$base_image' where id=$id";
+$results = do_query($query);
 
+echo "<img src='$newfileName'>";
 ?>
 </div> <!-- end middlecolumn -->
 <?php include_once('foot.php') ?>
