@@ -16,6 +16,21 @@ $cost = "$".$_POST['cost'];
 //if image count was 4.
 $image_count = 1;
 $base_image = $_POST['images'];
+if(count($_FILES['uploads']['filesToUpload'])) {
+	foreach ($_FILES['uploads']['filesToUpload'] as $file) {
+	    
+		//do your upload stuff here
+		echo "hello world";
+		echo $file;
+		
+	}
+}
+
+
+
+
+
+
 $query = "insert into listings (catagory, subcatagory,username,
 					subject,description,cost,image_count,base_image) values (
 					'$catagory','$subcatagory','$username','$subject','$description',
