@@ -26,7 +26,7 @@ $id = $row[0];
 //if image count was 4.
 $image_count = count($_FILES['images']['name']);
 $base_image = 'images/' . $username . "$id";
-echo $base_image;
+echo gettype($base_image);
 if ($image_count > 0){
 	$base_image = $_POST['images'];
 	for($i=0;$_FILES["images"]["name"][$i]==true;$i++) {
