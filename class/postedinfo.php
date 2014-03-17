@@ -40,8 +40,9 @@ if ($image_count > 0){
 		$moveResult= move_uploaded_file($fileTmpLoc, "$newfileName");
 		unlink($fileTmpLoc); // Remove the uploaded file from the PHP temp folder
 	}
-
+	echo $base_image . ":";
 	echo gettype($base_image);
+	echo $newfileName . ":";
 	echo gettype($newfileName);
 	//$query = "update listings set image_count=$image_count, base_image='$base_image' where id=$id";
 	//$results = do_query($query);
