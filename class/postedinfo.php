@@ -14,10 +14,8 @@ $cost = "$".$_POST['cost'];
 //planning on the base image being their username+id+index
 //for example: images/colton0201 through images/colton0204
 //if image count was 4.
-$image_count = 1;
+$image_count = count($_FILES['images']['name']);
 $base_image = $_POST['images'];
-print_r($_FILES);
-print_r($_FILES['images']);
 if(count($_FILES['images']['name'])) {
 	foreach ($_FILES['images']['name'] as $file) {
 		//do your upload stuff here
@@ -26,10 +24,7 @@ if(count($_FILES['images']['name'])) {
 		
 	}
 }
-else {
-	echo "didn't work";
-}
-
+echo $image_count;
 
 
 
