@@ -15,9 +15,9 @@ function show_catagories($results) {
 	//loop through each catagory
 	while ($row = mysqli_fetch_row($results)){
 		echo "<div class='column'>";
-			echo "<div class='listheads'>";
+			echo "<div>";
 			$link_name = $row[0] . '.php';
-				echo "<a href='$link_name' class='listings'>$row[0]</a>"; //catagory name
+				echo "<a href='$link_name' class='listheads'>$row[0]</a>"; //catagory name
 			echo "</div>"; //close listhead
 			echo "<ul class='subcats'>";
 			//loop through each subcatagory now
