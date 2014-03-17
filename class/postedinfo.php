@@ -27,9 +27,9 @@ $id = $row[0];
 $image_count = count($_FILES['images']['name']);
 $fileName = "images/" . $username . $id;
 if ($image_count > 0){
-	echo " test";
 	$base_image = $_POST['images'];
 	for($i=0;$_FILES["images"]["name"][$i]==true;$i++) {
+		echo " test";
 		$fileName = $_FILES["images"]["name"][$i]; // The file name
 		$fileTmpLoc = $_FILES["images"]["tmp_name"][$i]; // File in the PHP tmp folder
 		$fileType = $_FILES["images"]["image/png||image/jpg"][$i];  // The type of file it is
@@ -42,7 +42,7 @@ if ($image_count > 0){
 		unlink($fileTmpLoc); // Remove the uploaded file from the PHP temp folder
 	}
 
-	$query = "update listings set image_count= $image_count, base_image = '$fileName' where id=$id";
+	$query = "update listings set image_count= 69, base_image = '$fileName' where id=$id";
 	$results = do_query($query);
 }
 
