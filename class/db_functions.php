@@ -16,15 +16,17 @@ function show_catagories($results) {
 	while ($row = mysqli_fetch_row($results)){
 		echo "<div class='column'>";
 			echo "<div class='listheads'>";
-				echo $row[0]; //catagory name
+			$link_name = $row[0] . '.php';
+				echo "<href='$link_name'>"; //catagory name
 			echo "</div>"; //close listhead
 			echo "<ul class='subcats'>";
 			//loop through each subcatagory now
 			$query = "select name from subcatagories where parent = '$row[0]'";
 			$subresults = do_query($query);
 			while ($sub = mysqli_fetch_row($subresults)){
+				$sub_link = $sub[0] . '.php';
 				echo "<li>";
-				echo $sub[0];
+				echo $sub_link;
 				echo "</li>";
 			}
 			echo "</ul>"; 

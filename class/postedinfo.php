@@ -21,6 +21,7 @@ $results = do_query($query);
 $row = mysqli_fetch_row($results);
 $id = $row[0];
 
+//PROBLEM: FILE EXTENSIONS ARE NOT REMEMBERED
 //for example: images/colton0201 through images/colton0204
 //if image count was 4.
 $image_count = count($_FILES['images']['name']);
