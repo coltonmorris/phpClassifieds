@@ -42,8 +42,8 @@ if ($image_count > 0){
 		unlink($fileTmpLoc); // Remove the uploaded file from the PHP temp folder
 	}
 
-	//$query = "update listings set image_count=$image_count, set base_image='$base_image' where id=$id";
-	//$results = do_query($query);
+	$query = "update listings set image_count=$image_count, base_image='$base_image' where id=$id";
+	$results = do_query($query);
 }
 
 ?>
