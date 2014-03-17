@@ -25,6 +25,9 @@ if(count($_FILES['uploads']['filesToUpload'])) {
 		
 	}
 }
+else {
+	echo "didn't work";
+}
 
 
 
