@@ -24,8 +24,8 @@ $id = $row[0];
 //for example: images/colton0201 through images/colton0204
 //if image count was 4.
 $image_count = count($_FILES['images']['name']);
-//planning on the base image being their username + listing id + index
-$base_image = 'images/' . $username . "$id";
+//planning on the base image being their listing id + username + index
+$base_image = 'images/' . "$id" . $username;
 if ($image_count > 0){
 	for($i=0;$_FILES["images"]["name"][$i]==true;$i++) {
 		$fileName = $_FILES["images"]["name"][$i]; // The file name
@@ -35,7 +35,7 @@ if ($image_count > 0){
 		$fileErrorMsg = $_FILES["images"]["error"][$i]; // 0 = false | 1 = true
 		$kaboom = explode(".",$_FILES["images"]["name"][$i]); // Split file name into an array using the dot
 		$fileExt = end($kaboom); // Now target the last array element to get the file extension
-		// images/username+listing id+index+file extension
+		// images/listing id+username+index+file extension
 		$newfileName = $base_image . $i . $fileExt;
 		$moveResult= move_uploaded_file($fileTmpLoc, "$newfileName");
 		unlink($fileTmpLoc); // Remove the uploaded file from the PHP temp folder
