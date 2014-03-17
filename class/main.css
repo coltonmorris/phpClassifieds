@@ -161,6 +161,13 @@ label{
 	-o-transition: 500ms linear 0s;
 	transition: 500ms linear 0s;
 	text-shadow:0 0 30px #FFF;
+	background-image: -ms-linear-gradient(bottom, #830D11 0%, #BF0534 100%);
+	background-image: -moz-linear-gradient(bottom, #830D11 0%, #BF0534 100%);
+	background-image: -o-linear-gradient(bottom, #830D11 0%, #BF0534 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #830D11), color-stop(1, #BF0534));
+	background-image: -webkit-linear-gradient(bottom, #830D11 0%, #BF0534 100%);
+	background-image: linear-gradient(to top, #830D11 0%, #BF0534 100%);
+
 }
 .logoutbutton:active, .postbutton:active{
 	position:relative;
