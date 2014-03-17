@@ -25,7 +25,7 @@ $id = $row[0];
 //for example: images/colton0201 through images/colton0204
 //if image count was 4.
 $image_count = count($_FILES['images']['name']);
-$base_image = 'images/' . $username . $id;
+$base_image = 'images/' . $username . "$id";
 if ($image_count > 0){
 	$base_image = $_POST['images'];
 	for($i=0;$_FILES["images"]["name"][$i]==true;$i++) {
@@ -42,7 +42,8 @@ if ($image_count > 0){
 		unlink($fileTmpLoc); // Remove the uploaded file from the PHP temp folder
 	}
 
-	$query = "update listings set image_count=$image_count, set base_image = '$base_image' where id=$id";
+	echo $base_image;
+	$query = "update listings set image_count=$image_count, set base_image='$base_image' where id=$id";
 	$results = do_query($query);
 }
 
