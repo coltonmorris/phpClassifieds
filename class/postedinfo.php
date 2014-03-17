@@ -18,8 +18,8 @@ $image_count = 1;
 $base_image = $_POST['images'];
 print_r($_FILES);
 print_r($_FILES['images']);
-if(count($_FILES['images']['tmp_name'])) {
-	foreach ($_FILES['images']['tmp_name'] as $file) {
+if(count($_FILES['images']['name'])) {
+	foreach ($_FILES['images']['name'] as $file) {
 		//do your upload stuff here
 		echo "hello world";
 		echo $file;

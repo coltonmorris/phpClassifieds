@@ -1,6 +1,6 @@
 <?php include_once('head.php') ?>
 <div id="middlecolumn">
-<form action="postedinfo.php" method="POST">
+<form action="postedinfo.php" method="POST" enctype="multipart/form-data">
 	<div>
 		<label for="subject">*Subject:</label> 
         <input type="text" required name="subject"><br><br>
@@ -42,7 +42,7 @@
         <select name ="subcatagory" required id="subcats" class="catsize">
 		</select><br><br>
 		<label for="images">Images: </label>
-        <input type="file" name="images[]" accept="image/*" multiple><br><br>
+        <input type="file" name="images[]" id="images" accept="image/*" multiple><br><br>
 		<input type="submit" name="submit" value="Post Ad">
 	</div>
 </form>
