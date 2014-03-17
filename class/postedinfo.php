@@ -16,8 +16,7 @@ $cost = "$".$_POST['cost'];
 //if image count was 4.
 $image_count = 1;
 $base_image = $_POST['images'];
-print_r($_FILE);
-//print_r($_POST);
+print_r($_POST);
 if(count($_FILES['uploads']['images'])) {
 	foreach ($_FILES['uploads']['images'] as $file) {
 		//do your upload stuff here
