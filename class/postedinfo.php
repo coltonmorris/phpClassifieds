@@ -36,7 +36,7 @@ if ($image_count > 0){
 		$kaboom = explode(".",$_FILES["images"]["name"][$i]); // Split file name into an array using the dot
 		$fileExt = end($kaboom); // Now target the last array element to get the file extension
 		// images/listing id+username+index+file extension
-		$newfileName = $base_image . $i . $fileExt;
+		$newfileName = $base_image . $i . '.' $fileExt;
 		$moveResult= move_uploaded_file($fileTmpLoc, "$newfileName");
 		unlink($fileTmpLoc); // Remove the uploaded file from the PHP temp folder
 	}
