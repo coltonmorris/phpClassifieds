@@ -1,4 +1,7 @@
-<?php include_once('head.php');?>
+<?php 
+	header("Status: 404 Not Found");
+	include_once('head.php');
+	?>
 <div id="middlecolumn">
 	<h2>
     	404!
