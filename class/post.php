@@ -7,7 +7,7 @@
 		<label for="description">*Description: </label>
         <textarea name="description" required cols="60" rows="5"></textarea><br><br>
 		<label for="cost">*Cost: </label>
-        <input type="text" required name="cost"><br><br>
+        <input type="number" required name="cost"><br><br>
         <script type="text/javascript">
 			$(document).ready(function() {
 				//alert('Document is ready');
