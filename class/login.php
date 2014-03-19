@@ -20,8 +20,8 @@ if ($_SESSION['badlogin'] == true){
 <div id="middlecolumn">
 <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
 	<p>
-		Username:<input type="text" name="username"><br/>
-		Password:<input type="password" name="password"><br/>
+		Username:<input type="text" name="username"><br><br>
+		Password:<input type="password" name="password"><br><br>
 		<input type="submit" value="login" name="login">
 	</p>
 </form>
