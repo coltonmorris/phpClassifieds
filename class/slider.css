@@ -38,6 +38,11 @@ pre + h2{
 	position:relative;
 	top:-52px;
 }
+@-moz-document url-prefix() {
+    #container {
+        top: 0;
+    }
+}
 
 #banner-fade,
 #banner-slide{
