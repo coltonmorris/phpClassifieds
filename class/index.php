@@ -1,10 +1,8 @@
 <?php include_once('head.php'); ?>
 <script>
 	$( document ).ready(function() {  
-		alert( "preif"); 
 		if ($.browser.mozilla) {
 			$("#container").css( 'top', '0px');
-			alert( "it ran" );
 		}	
 	});
 </script>
