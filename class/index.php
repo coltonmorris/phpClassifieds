@@ -1,13 +1,8 @@
 <script>
-	if ($.browser.webkit) {
-		$("#container").css( "top","-52px" );
-		}
-	else if ( $.browser.msie ) {
-		$("#container").css( "top","-52px" );
+	if ($.browser.mozilla) {
+		$("#container").css( "top", "0px");
 	}
-	else{
-		$("#container").css( "top", "0" );
-	}
+		
 </script>
 
 <?php include_once('head.php'); ?>
