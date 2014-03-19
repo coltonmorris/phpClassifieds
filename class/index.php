@@ -1,8 +1,10 @@
 <script>
-	if ($.browser.mozilla) {
-		$("#container").css( "top", "0px");
-	}
-		
+	$( document ).ready(function() {   
+		if ($.browser.mozilla) {
+			$("#container").css( 'top', '0px');
+			alert( "it ran" );
+		}	
+	});
 </script>
 
 <?php include_once('head.php'); ?>
