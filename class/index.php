@@ -1,3 +1,15 @@
+<script>
+	if ($.browser.webkit) {
+		$("#container").css( "top","-52px" );
+		}
+	else if ( $.browser.msie ) {
+		$("#container").css( "top","-52px" );
+	}
+	else{
+		$("#container").css( "top", "0" );
+	}
+</script>
+
 <?php include_once('head.php'); ?>
 <div id="container">
 	<div id="banner-fade">
