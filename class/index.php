@@ -1,5 +1,6 @@
 <script>
-	$( document ).ready(function() {   
+	$( document ).ready(function() {  
+		alert( "preif"); 
 		if ($.browser.mozilla) {
 			$("#container").css( 'top', '0px');
 			alert( "it ran" );
