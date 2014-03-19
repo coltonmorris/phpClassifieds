@@ -1,3 +1,4 @@
+<?php include_once('head.php'); ?>
 <script>
 	$( document ).ready(function() {  
 		alert( "preif"); 
@@ -8,7 +9,6 @@
 	});
 </script>
 
-<?php include_once('head.php'); ?>
 <div id="container">
 	<div id="banner-fade">
     	<ul class="bjqs">
