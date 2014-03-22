@@ -41,10 +41,16 @@ if ($image_count > 0){
 		$newfileName = $base_image . $i . '.' . $fileExt;
 		$moveResult= move_uploaded_file($fileTmpLoc, "$newfileName");
 		unlink($fileTmpLoc); // Remove the uploaded file from the PHP temp folder
+
+		//add file to table
+		$imageColumn = 'image_'."$i";
+		$query = "update listings set '$imageColumn'='$newfileName' where id=$id";
+		$results = do_query($query);
 	}
 }
 //update listing to include the base filename and image count
-$query = "update listings set image_count=$image_count, base_image='$base_image' where id=$id";
+//$query = "update listings set image_count=$image_count, base_image='$base_image' where id=$id";
+$query = "update listings set image_count=$image_count where id=$id";
 $results = do_query($query);
 
 echo "<img src='$newfileName'>";
