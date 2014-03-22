@@ -44,7 +44,7 @@ if ($image_count > 0){
 
 		//add file to table
 		$imageColumn = 'image_'."$i";
-		$query = "update listings set '$imageColumn'='$newfileName' where id=$id";
+		$query = "update listings set $imageColumn='$newfileName' where id=$id";
 		$results = do_query($query);
 	}
 }
