@@ -1,9 +1,10 @@
 <?php include_once('head.php');?>
 <div id="listings">
 <?php 
-echo "<PRE>";
-print_r($_GET);
-echo "</PRE>";
+$subcatagory = $_GET['subcatagory'];
+$query = "select * from listings where subcatagory='$subcatagory'";
+$results = do_query($query);
+show_table($results);
 ?>
 </div>
 
