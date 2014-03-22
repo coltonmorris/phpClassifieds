@@ -53,7 +53,7 @@ if ($image_count > 0){
 $query = "update listings set image_count=$image_count where id=$id";
 $results = do_query($query);
 
-echo "<img src='$newfileName'>";
+//echo "<img src='$newfileName'>";
 ?>
 </div> <!-- end middlecolumn -->
 <?php include_once('foot.php') ?>
