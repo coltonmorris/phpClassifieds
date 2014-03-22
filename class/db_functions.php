@@ -5,7 +5,6 @@ function do_query($query){
 	$pass =  '@greglayton$$$';
 	$db = 'ataxicde_classifieds';
 	$conn = mysqli_connect($host,$usr,$pass,$db) or die ("not connected");
-	//mysql_select_db ("ataxicde_classifieds");
 	$results = mysqli_query($conn,$query) or die (mysqli_error($conn));
 	mysqli_close($conn);
 	return $results; 
@@ -16,6 +15,7 @@ function show_catagories($results) {
 	while ($row = mysqli_fetch_row($results)){
 		echo "<div class='column'>";
 			echo "<div>";
+			//uses get to pass the correct catagory
 			$link_name = "catagory.php?catagory=$row[0]";
 				echo "<a href='$link_name' class='listheads'>$row[0]</a>"; //catagory name
 			echo "</div>"; //close listhead
@@ -24,7 +24,8 @@ function show_catagories($results) {
 			$query = "select name from subcatagories where parent = '$row[0]'";
 			$subresults = do_query($query);
 			while ($sub = mysqli_fetch_row($subresults)){
-				$sub_link = $sub[0] . '.php';
+				//uses get to pass the correct subcatagory
+				$sub_link = "subcatagory.php?subcatagory=$sub[0]";
 				echo "<li>";
 				echo "<a href='$sub_link'>$sub[0]</a>"; //subcatagory name
 				echo "</li>";
