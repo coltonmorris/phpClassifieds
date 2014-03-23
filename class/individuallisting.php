@@ -5,6 +5,11 @@ $id = $_GET['id'];
 $query = "select * from listings where id='$id'";
 $results = do_query($query);
 show_table($results);
+while ($row = mysqli_fetch_assoc($results)){
+	foreach ($row as $k =>$val){
+		echo $k. ' '.$val;
+	}
+}
 ?>
 </div>
 

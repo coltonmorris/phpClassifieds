@@ -63,6 +63,7 @@ function show_user_admin($results) {
 								$username = $val;
 						}
 						else if ($k == 'RoleID'){
+							//find the value of their RoleID for GET
 								$RoleID = $val;
 						}
             else if ($k == 'email') {
@@ -73,6 +74,7 @@ function show_user_admin($results) {
             }
         }
 				if ($RoleID != 1){
+					//use GET to pass variables to the page
 					echo "<td><a href=delete_user.php?username=$username&RoleID=$RoleID>
 											delete</a></td>";
 				}
@@ -107,6 +109,51 @@ function delete_row($table,$where_key,$where){
 	$results = do_query($query);
 	return $results;
 }
+function add_user($username,$password,$email,$RoleID){
+	$query = "select * from users where username='$username' or email='$email'";
+	$results = do_query($query);
+	if (mysqli_num_rows($results) >0){
+		$results = "Account already exists";
+	}
+	else {
+			$query = "INSERT INTO users VALUES ('$username',
+							'$password','$email',$RoleID)";
+			do_query($query);
+			$results = login($username,$password);
+			$results .=", and your account has been created, thank you.";
+	}
+	return $results;
+}
+function logout(){
+session_destroy();
+}
+function login($username,$password){
+	//we are only going to have an admin
+	logout();
+	session_start();
+	$query = "select RoleID from users where username='$username'
+							and password='$password'";
+	$results = do_query($query);
+	if (mysqli_num_rows($results) >0){
+		$row=mysqli_fetch_assoc($results);
+		$RoleID = $row['RoleID'];
+		$_SESSION['username'] = $username;
+		$_SESSION['password'] = $password;
+		$_SESSION['RoleID'] = $RoleID;
+		$filename = "user_control.php";
+		//admin
+		if ($RoleID == 1){
+			$filename = "admin_control.php";
+		}
+		$_SESSION['control_panel'] = $filename;
+		$_SESSION['allow'] = true;
+		$_SESSION['badlogin']=false;
+	}
+	else { 
+		$_SESSION['badlogin']=true;
+	}
+}
+//anything below this is for reference and not actually used
 function functional_textarea_jobs($username,$field,$submit_button,$primary){
 	if (isset($_POST[$submit_button])){
 		$query = "select * from jobs where id = '$primary'";
@@ -170,49 +217,5 @@ function display_dropdown($table){
 	}
 	$html .= "</select>";
 	return $html;
-}
-function add_user($username,$password,$email,$RoleID){
-	$query = "select * from users where username='$username' or email='$email'";
-	$results = do_query($query);
-	if (mysqli_num_rows($results) >0){
-		$results = "Account already exists";
-	}
-	else {
-			$query = "INSERT INTO users VALUES ('$username',
-							'$password','$email',$RoleID)";
-			do_query($query);
-			$results = login($username,$password);
-			$results .=", and your account has been created, thank you.";
-	}
-	return $results;
-}
-function logout(){
-session_destroy();
-}
-function login($username,$password){
-	//we are only going to have an admin
-	logout();
-	session_start();
-	$query = "select RoleID from users where username='$username'
-							and password='$password'";
-	$results = do_query($query);
-	if (mysqli_num_rows($results) >0){
-		$row=mysqli_fetch_assoc($results);
-		$RoleID = $row['RoleID'];
-		$_SESSION['username'] = $username;
-		$_SESSION['password'] = $password;
-		$_SESSION['RoleID'] = $RoleID;
-		$filename = "user_control.php";
-		//admin
-		if ($RoleID == 1){
-			$filename = "admin_control.php";
-		}
-		$_SESSION['control_panel'] = $filename;
-		$_SESSION['allow'] = true;
-		$_SESSION['badlogin']=false;
-	}
-	else { 
-		$_SESSION['badlogin']=true;
-	}
 }
 ?>
