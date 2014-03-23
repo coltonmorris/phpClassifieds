@@ -8,6 +8,8 @@ show_table($results);
 $query = "select * from listings where id='$id'";
 $results = do_query($query);
 $count = 0;
+//this code is ugly, and IDGAF, i'm the only one who reads it.
+//It is how to access the images,though.
 while ($row = mysqli_fetch_assoc($results)){
 	foreach ($row as $k =>$val){
 		if ($k == 'image_0'){
