@@ -15,7 +15,7 @@ while ($row = mysqli_fetch_assoc($results)){
 		if ($k == $imageTableName){
 			echo "yay	A;LSDKFJA;LSKDFJAL;KDSFJ";
 //			//echo "<img src = $val>";
-//		}
+		}
 	}
 //	count ++;
 }
