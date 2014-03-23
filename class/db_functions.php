@@ -82,11 +82,16 @@ function show_table($results) {
             if ($k == 'email') {
                 echo "<td><a href=mailto:$val>$val</a></td>";
             } 
+						//links to the individual listing
+						if ($k == 'id'){
+							$link = "individuallisting.php?id=$val";
+						}
+
 						else {
                 echo "<td>$val</td>";
             }
         }
-        echo "</tr>";
+        echo "<a href=$link>test</a></tr>";
     }
     echo "</table>";
 }

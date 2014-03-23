@@ -6,9 +6,6 @@
 		Username:<input type="text" name="username"><br/>
 		Password:<input type="text" name="password"><br/>
 		Email:<input type="text" name="email"><br/>
-		Role:
-		<!-- dropdown: name = 'Roles'-->
-		<?php echo display_dropdown('Roles'); ?><br/>
 		<input type="submit" value="Create Account" name="new_user">
 </form> 
 </p>
@@ -18,7 +15,7 @@ if (isset($_POST['new_user'])){
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		$email = $_POST['email'];
-		$RoleID = $_POST['Roles'];
+		$RoleID = 0;
 		echo add_user($username,$password,$email,$RoleID);
 }
 ?>
