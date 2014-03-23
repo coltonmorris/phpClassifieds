@@ -13,7 +13,7 @@ while ($row = mysqli_fetch_assoc($results)){
 	foreach ($row as $k =>$val){
 		echo $k. ' ';
 		if ($k == $imageTableName){
-			echo "yay	A;LSDKFJA;LSKDFJAL;KDSFJ";
+			echo $val;
 //			//echo "<img src = $val>";
 		}
 	}
