@@ -19,7 +19,6 @@ while ($row = mysqli_fetch_assoc($results)){
 	}
 	count ++;
 }
-echo 
 echo "hello world";
 ?>
 </div>
