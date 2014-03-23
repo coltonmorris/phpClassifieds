@@ -9,7 +9,8 @@ $query = "select * from listings where id='$id'";
 $results = do_query($query);
 $count = 0;
 while ($row = mysqli_fetch_assoc($results)){
-//	$imageTableName = "image_$count";
+	$imageTableName = "image_$count";
+	echo $imageTableName
 //	echo $imageTableName;
 //	foreach ($row as $k =>$val){
 //		echo $k. ' ';
