@@ -4,9 +4,9 @@
 $id = $_GET['id'];
 $query = "select * from listings where id='$id'";
 $results = do_query($query);
-show_table($results);
-$query = "select * from listings where id='$id'";
-$results = do_query($query);
+//show_table($results);
+//$query = "select * from listings where id='$id'";
+//$results = do_query($query);
 $count = 0;
 while ($row = mysqli_fetch_assoc($results)){
 	$imageTableName = "image_$count";
@@ -19,6 +19,7 @@ while ($row = mysqli_fetch_assoc($results)){
 	}
 	count ++;
 }
+echo 
 echo "hello world";
 ?>
 </div>
