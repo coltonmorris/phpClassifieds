@@ -9,14 +9,21 @@ $query = "select * from listings where id='$id'";
 $results = do_query($query);
 $count = 0;
 while ($row = mysqli_fetch_assoc($results)){
-	$imageTableName = "image_$count";
 	foreach ($row as $k =>$val){
 		echo $k. ' ';
-		if ($k == $imageTableName){
+		if ($k == $image_0){
+			echo "<img src = $val>";
+		}
+		else if ($k == $image_1){
+			echo "<img src = $val>";
+		}
+		else if ($k == $image_2){
+			echo "<img src = $val>";
+		}
+		else if ($k == $image_3){
 			echo "<img src = $val>";
 		}
 	}
-	count ++;
 }
 ?>
 </div>
