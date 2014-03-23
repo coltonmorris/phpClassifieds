@@ -6,6 +6,7 @@ $query = "select * from listings where id='$id'";
 $results = do_query($query);
 show_table($results);
 $query = "select * from listings where id='$id'";
+$results = do_query($query);
 while ($row = mysqli_fetch_assoc($results)){
 	foreach ($row as $k =>$val){
 		echo $k. ' '.$val;
