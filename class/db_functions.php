@@ -25,7 +25,7 @@ function show_catagories($results) {
 			$subresults = do_query($query);
 			while ($sub = mysqli_fetch_row($subresults)){
 				//uses get to pass the correct subcatagory
-				$sub_link = "subcatagory.php?subcatagory=$sub[0]";
+				$sub_link = "subcatagory.php?subcatagory=$sub[0]&catagory=$row[0]";
 				echo "<li>";
 				echo "<a href='$sub_link'>$sub[0]</a>"; //subcatagory name
 				echo "</li>";

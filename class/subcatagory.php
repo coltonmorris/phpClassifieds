@@ -2,7 +2,8 @@
 <div id="listings">
 <?php 
 $subcatagory = $_GET['subcatagory'];
-$query = "select * from listings where subcatagory='$subcatagory'";
+$catagory = 	 $_GET['catagory'];
+$query = "select * from listings where subcatagory='$subcatagory' and catagory='$catagory'";
 $results = do_query($query);
 show_table($results);
 ?>
