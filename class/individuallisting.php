@@ -11,9 +11,9 @@ $count = 0;
 while ($row = mysqli_fetch_assoc($results)){
 	$imageTableName = "image_$count";
 	foreach ($row as $k =>$val){
-	//	if ($k == $imageTableName){
-	//		echo "<img src = $val>";
-	//	}
+		if ($k == $imageTableName){
+			echo "<img src = $val>";
+		}
 	}
 	count ++;
 }
