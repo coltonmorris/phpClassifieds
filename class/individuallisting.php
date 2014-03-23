@@ -10,17 +10,16 @@ $results = do_query($query);
 $count = 0;
 while ($row = mysqli_fetch_assoc($results)){
 	foreach ($row as $k =>$val){
-		echo $k. ' ';
-		if ($k == $image_0){
+		if ($k == 'image_0'){
 			echo "<img src = $val>";
 		}
-		else if ($k == $image_1){
+		else if ($k == 'image_1'){
 			echo "<img src = $val>";
 		}
-		else if ($k == $image_2){
+		else if ($k == 'image_2'){
 			echo "<img src = $val>";
 		}
-		else if ($k == $image_3){
+		else if ($k == 'image_3'){
 			echo "<img src = $val>";
 		}
 	}
