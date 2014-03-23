@@ -62,14 +62,20 @@ function show_user_admin($results) {
 						if ($k == 'username'){
 								$username = $val;
 						}
-            if ($k == 'email') {
+						else if ($k == 'RoleID'){
+								$RoleID = $val;
+						}
+            else if ($k == 'email') {
                 echo "<td><a href=mailto:$val>$val</a></td>";
             } 
 						else {
                 echo "<td>$val</td>";
             }
         }
-				echo "<td><a href=delete_user.php?username=$username>delete</a></td>";
+				if ($RoleID != 1){
+					echo "<td><a href=delete_user.php?username=$username&RoleID=$RoleID>
+											delete</a></td>";
+				}
         echo "</tr>";
     }
     echo "</table>";
