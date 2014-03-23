@@ -10,6 +10,7 @@ while ($row = mysqli_fetch_assoc($results)){
 		echo $k. ' '.$val;
 	}
 }
+echo "hello world";
 ?>
 </div>
 
