@@ -10,17 +10,14 @@ $results = do_query($query);
 $count = 0;
 while ($row = mysqli_fetch_assoc($results)){
 	$imageTableName = "image_$count";
-	echo $imageTableName;
-//	echo $imageTableName;
-//	foreach ($row as $k =>$val){
+	foreach ($row as $k =>$val){
 //		echo $k. ' ';
 //		if ($k == $imageTableName){
 //			//echo "<img src = $val>";
 //		}
-//	}
+	}
 //	count ++;
 }
-echo "hello world";
 ?>
 </div>
 
