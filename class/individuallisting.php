@@ -13,8 +13,7 @@ while ($row = mysqli_fetch_assoc($results)){
 	foreach ($row as $k =>$val){
 		echo $k. ' ';
 		if ($k == $imageTableName){
-			echo $val;
-//			//echo "<img src = $val>";
+			echo "<img src = $val>";
 		}
 	}
 //	count ++;
