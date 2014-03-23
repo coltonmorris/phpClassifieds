@@ -8,7 +8,7 @@ show_table($results);
 $query = "select * from listings where id='$id'";
 $results = do_query($query);
 $count = 0;
-//while ($row = mysqli_fetch_assoc($results)){
+while ($row = mysqli_fetch_assoc($results)){
 //	$imageTableName = "image_$count";
 //	echo $imageTableName;
 //	foreach ($row as $k =>$val){
@@ -18,7 +18,7 @@ $count = 0;
 //		}
 //	}
 //	count ++;
-//}
+}
 echo "hello world";
 ?>
 </div>
