@@ -16,7 +16,7 @@ while ($row = mysqli_fetch_assoc($results)){
 			echo "<img src = $val>";
 		}
 	}
-//	count ++;
+	count ++;
 }
 ?>
 </div>
