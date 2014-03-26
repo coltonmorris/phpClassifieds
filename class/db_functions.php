@@ -87,13 +87,14 @@ function show_table($results) {
     while ($row = mysqli_fetch_assoc($results)) {
         echo "<tr>";
         foreach ($row as $k => $val) {
-            if ($k == 'email') {
+			//Colton - make it so that this if statement excludes everything except for the subject category and sub category
+            if ($k == 'email' and $k != 'image') {
                 echo "<td><a href=mailto:$val>$val</a></td>";
             } 
 						//links to the individual listing
 						else if ($k == 'id'){
 							$link = "individuallisting.php?id=$val";
-							echo "<td><a href=$link>link</a></td>";
+							echo "<td><a href=$link>link</a></td>"; //change the word "link" to be $subject
 						}
 
 						else {
