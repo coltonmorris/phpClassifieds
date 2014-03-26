@@ -22,11 +22,12 @@
           $('#banner-fade').bjqs({
             height      : $('#container').height(),
             width       : $('#container').width(),
-            responsive  : true,
-			showcontrols    : false,
-			showmarkers     : false,
 			animduration    : 800,  
             animspeed       : 30000,
+			showcontrols    : false,
+			showmarkers     : false,
+			responsive  	: true,
+			usecaprions 	: false
           });
 
         });
