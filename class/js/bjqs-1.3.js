@@ -28,16 +28,16 @@
 
             // transition valuess
             animtype        : 'fade',
-            animduration    : 450,      // length of transition
-            animspeed       : 4000,     // delay between transitions
+            animduration    : 800,      // length of transition
+            animspeed       : 9000,     // delay between transitions
             automatic       : true,     // enable/disable automatic slide rotation
 
             // control and marker configuration
-            showcontrols    : true,     // enable/disable next + previous UI elements
+            showcontrols    : false,     // enable/disable next + previous UI elements
             centercontrols  : true,     // vertically center controls
             nexttext        : 'Next',   // text/html inside next UI element
             prevtext        : 'Prev',   // text/html inside previous UI element
-            showmarkers     : true,     // enable/disable individual slide UI markers
+            showmarkers     : false,     // enable/disable individual slide UI markers
             centermarkers   : true,     // horizontally center markers
 
             // interaction values
@@ -45,7 +45,7 @@
             hoverpause      : true,     // enable/disable pause slides on hover
 
             // presentational options
-            usecaptions     : true,     // enable/disable captions using img title attribute
+            usecaptions     : false,     // enable/disable captions using img title attribute
             randomstart     : false,     // start from a random slide
             responsive      : false     // enable responsive behaviour
 

@@ -20,8 +20,8 @@
         jQuery(document).ready(function($) {
 
           $('#banner-fade').bjqs({
-            height      : $('#container').height(),
-            width       : $('#container').width(),
+            height      	: $('#container').height(),
+            width       	: $('#container').width(),
 			animduration    : 800,  
             animspeed       : 30000,
 			showcontrols    : false,
