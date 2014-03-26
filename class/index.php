@@ -22,8 +22,6 @@
           $('#banner-fade').bjqs({
             height      	: $('#container').height(),
             width       	: $('#container').width(),
-			animduration    : 800,  
-            animspeed       : 30000,
 			showcontrols    : false,
 			showmarkers     : false,
 			responsive  	: true,
