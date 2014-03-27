@@ -1,11 +1,11 @@
 <?php include_once('head.php');?>
 <div id="listings">
 <?php 
-$query = "select * from listings";
+$query = "select date,subject,cost,image_count from listings";
 $results = do_query($query);
 show_listings($results);
 ?>
-    <div class="lItem">
+   <div class="lItem">
     	<div class="lDate">
         	<p>
         		November 28
@@ -21,6 +21,6 @@ show_listings($results);
         	<img src="camera.png"> <!--Only diplays if listing has a picture-->
         </div>
     </div>
-</div>
+</div> 
 
 <?php include_once('foot.php'); ?>
