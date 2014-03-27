@@ -171,10 +171,9 @@ label{
 	width: auto;
 	float: left;
 	font-size: 14px;
-	padding-top: 8px;
 }
 .lPicture img{
-	width:40px;
+	width:30px;
 }
 .listing{
 	padding:10px;
