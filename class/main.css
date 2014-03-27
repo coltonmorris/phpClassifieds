@@ -149,7 +149,7 @@ label{
 	margin:auto;
 }
 .lSubject{
-	width:77%;
+	width:74%;
 	padding-right:20px;
 	padding-left:20px;
 	padding-top:7px;
@@ -157,8 +157,10 @@ label{
 	overflow:hidden;
 }
 .lSubject a{
-	text-decoration:none;
 	color:black;
+}
+.lsubject a:hover{
+	background-color:#bd0532;
 }
 .lPicture{
 	width:100px;
