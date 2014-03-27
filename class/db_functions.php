@@ -35,29 +35,31 @@ function show_catagories($results) {
 	}
 }
 function show_listings($results) {
-	echo "<div class='lItem'>";
+	echo "<div id='listings'>";
 	while ($row = mysqli_fetch_assoc($results)) {
+		echo "<div class='lItem'>";
 			foreach ($row as $k => $val) {
-					if ($k == 'date') {
-						echo "<div class='lDate'>";
-						echo "<p>";
-						echo date("F d",$val);
-						echo "</p>";
-						echo "</div>";
-					} 
-					//links to the individual listing
-					else if ($k == 'id'){
-						$link = "individuallisting.php?id=$val";
-						echo "<td><a href=$link>link</a></td>"; //change the word "link" to be $subject
-					}
+				echo "$k $val. ";
+		//			if ($k == 'date') {
+		//				echo "<div class='lDate'>";
+		//				echo "<p>";
+		//				echo date("F d",$val);
+		//				echo "</p>";
+		//				echo "</div>";
+		//			} 
+		//			//links to the individual listing
+		//			else if ($k == 'id'){
+		//				$link = "individuallisting.php?id=$val";
+		//				echo "<td><a href=$link>link</a></td>"; //change the word "link" to be $subject
+		//			}
 
-					else {
-							echo "<td>$val</td>";
-					}
+		//			else {
+		//					echo "<td>$val</td>";
+		//			}
 			}
-			echo "</tr>";
+		//echo "</div>";
 	}
-	echo "</table>";
+	//echo "</div>";
 }
 function show_job_admin($results) {
     echo "<table class='listing'>";
