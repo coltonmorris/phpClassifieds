@@ -18,7 +18,7 @@ show_table($results);
         	$8000
         </div>
         <div class="lPicture">
-        	Picture <!--Only diplays if listing has a picture-->
+        	<img src="camera.png"> <!--Only diplays if listing has a picture-->
         </div>
     </div>
 </div>
