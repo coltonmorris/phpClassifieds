@@ -5,19 +5,6 @@ $query = "select * from listings";
 $results = do_query($query);
 show_table($results);
 ?-->
-	<div class="lItem">
-    	<div class="lDate">
-        	<p>
-        		November 28
-            </p>
-        </div>
-        <div class="lSubject">
-        	<a href="Link to the listing"><!--this will be listing.subject text-->This is my pretty poodle</a>
-        </div>
-        <div class="lPicture">
-        	Picture <!--Only diplays if listing has a picture-->
-        </div>
-    </div>
     <div class="lItem">
     	<div class="lDate">
         	<p>
@@ -25,46 +12,10 @@ show_table($results);
             </p>
         </div>
         <div class="lSubject">
-        	<a href="Link to the listing"><!--this will be listing.subject text-->This is my pretty poodle</a>
+        	<a href="Link to the listing"><!--this will be listing.subject text-->Humanities 3400 text book for sale</a>
         </div>
-        <div class="lPicture">
-        	Picture <!--Only diplays if listing has a picture-->
-        </div>
-    </div>
-    <div class="lItem">
-    	<div class="lDate">
-        	<p>
-        		November 28
-            </p>
-        </div>
-        <div class="lSubject">
-        	<a href="Link to the listing"><!--this will be listing.subject text-->This is my pretty poodle</a>
-        </div>
-        <div class="lPicture">
-        	Picture <!--Only diplays if listing has a picture-->
-        </div>
-    </div>
-    <div class="lItem">
-    	<div class="lDate">
-        	<p>
-        		November 28
-            </p>
-        </div>
-        <div class="lSubject">
-        	<a href="Link to the listing"><!--this will be listing.subject text-->123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890</a>
-        </div>
-        <div class="lPicture">
-        	Picture <!--Only diplays if listing has a picture-->
-        </div>
-    </div>
-    <div class="lItem">
-    	<div class="lDate">
-        	<p>
-        		November 28
-            </p>
-        </div>
-        <div class="lSubject">
-        	<a href="Link to the listing"><!--this will be listing.subject text-->This is my pretty poodle</a>
+        <div class="lCost">
+        	$80
         </div>
         <div class="lPicture">
         	Picture <!--Only diplays if listing has a picture-->

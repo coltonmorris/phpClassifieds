@@ -161,6 +161,13 @@ label{
 .lsubject a:hover{
 	background-color:#bd0532;
 }
+.lCost{
+	float:left;
+	height:auto;
+	width:auto;
+	margin:auto;
+	padding: 7px 0px 0px 0px;
+}
 .lPicture{
 	width:auto;
 	float:left;
