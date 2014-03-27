@@ -43,6 +43,7 @@ function show_listings($results) {
 						echo "<p>";
 						echo date("F d",$val);
 						echo "</p>";
+						echo "</div>";
 					} 
 					//links to the individual listing
 					else if ($k == 'id'){
