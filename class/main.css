@@ -129,11 +129,10 @@ label{
 	transition: 500ms linear 0s;
 }
 .lItem{
-	width:90%;
+	width:100%;
 	height:40px;
 	font-size:16px;
-	padding-top:5px;
-	padding-bottom:5px;
+	padding:5px;
 }
 .lDate{
 	background-color:#BD0532;
@@ -149,8 +148,8 @@ label{
 }
 .lSubject{
 	width:74%;
-	margin-right:20px;
-	margin-left:20px;
+	margin-right:10px;
+	margin-left:10px;
 	padding-top:7px;
 	float:left;
 	overflow:hidden;
@@ -166,11 +165,13 @@ label{
 	height:auto;
 	width:auto;
 	margin:auto;
-	padding: 7px 0px 0px 0px;
+	padding: 7px 10px 0px 0px;
 }
 .lPicture{
-	width:auto;
-	float:left;
+	width: auto;
+	float: left;
+	font-size: 14px;
+	padding-top: 8px;
 }
 .listing{
 	padding:10px;
@@ -268,8 +269,8 @@ label{
 #listings{
 	margin-left:auto;
 	margin-right:auto;
-	width:95%;
-	padding: 60px 5px 40px 5px;
+	width:100%;
+	padding: 60px 0 40px 0;
 }
 #lost{
 	margin-left:auto;
