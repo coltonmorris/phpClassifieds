@@ -34,6 +34,30 @@ function show_catagories($results) {
 		echo "</div>"; //close column
 	}
 }
+function show_listings($results) {
+	echo "<div class='lItem'>";
+	while ($row = mysqli_fetch_assoc($results)) {
+			foreach ($row as $k => $val) {
+					if ($k == 'date') {
+						echo "<div class='lDate'>";
+						echo "<p>";
+						echo date("F d",$val);
+						echo "</p>";
+					} 
+					//links to the individual listing
+					else if ($k == 'id'){
+						$link = "individuallisting.php?id=$val";
+						echo "<td><a href=$link>link</a></td>"; //change the word "link" to be $subject
+					}
+
+					else {
+							echo "<td>$val</td>";
+					}
+			}
+			echo "</tr>";
+	}
+	echo "</table>";
+}
 function show_job_admin($results) {
     echo "<table class='listing'>";
     while ($row = mysqli_fetch_assoc($results)) {

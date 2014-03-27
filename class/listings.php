@@ -1,10 +1,10 @@
 <?php include_once('head.php');?>
 <div id="listings">
-<!--?php 
+<?php 
 $query = "select * from listings";
 $results = do_query($query);
-show_table($results);
-?-->
+show_listings($results);
+?>
     <div class="lItem">
     	<div class="lDate">
         	<p>
