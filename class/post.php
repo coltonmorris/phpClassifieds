@@ -3,7 +3,7 @@
 <form action="postedinfo.php" method="POST" enctype="multipart/form-data">
 	<div>
 		<label for="subject">*Subject:</label> 
-        <input type="text" required name="subject" maxlength="120"><br><br>
+        <input type="text" required name="subject" maxlength="68"><br><br>
 		<label for="description">*Description: </label>
         <textarea name="description" required cols="60" rows="5"></textarea><br><br>
 		<label for="cost">*Cost: </label>
