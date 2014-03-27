@@ -51,7 +51,7 @@ show_table($results);
             </p>
         </div>
         <div class="lSubject">
-        	<a href="Link to the listing"><!--this will be listing.subject text-->This is my pretty poodle</a>
+        	<a href="Link to the listing"><!--this will be listing.subject text-->12345678901234567890123456789012345678901234567890</a>
         </div>
         <div class="lPicture">
         	Picture <!--Only diplays if listing has a picture-->
