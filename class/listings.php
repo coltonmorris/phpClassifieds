@@ -15,7 +15,7 @@ show_table($results);
         	<a href="Link to the listing"><!--this will be listing.subject text-->Humanities 3400 text book for sale</a>
         </div>
         <div class="lCost">
-        	$80
+        	$8000
         </div>
         <div class="lPicture">
         	Picture <!--Only diplays if listing has a picture-->
