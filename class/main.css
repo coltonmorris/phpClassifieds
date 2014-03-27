@@ -130,7 +130,7 @@ label{
 }
 .lItem{
 	width:90%;
-	height:100px;
+	height:40px;
 	font-size:14px;
 	border-bottom-style:solid;
 	border-bottom-color:#515151;
@@ -138,13 +138,17 @@ label{
 }
 .lDate{
 	background-color:#BD0532;
-	color:e8e8e8;
+	color:#e8e8e8;
 	width: 100px;
 	height: 90%;
 	margin:auto;
 	float:left;
 }
+.lDate p{
+	margin:auto;
+}
 .lSubject{
+	padding-left:20px;
 	float:left;
 	overflow:hidden;
 	overflow-style:auto;
@@ -155,6 +159,7 @@ label{
 }
 .lPicture{
 	width:100px;
+	float:left;
 }
 .listing{
 	padding:10px;

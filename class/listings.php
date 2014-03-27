@@ -7,7 +7,9 @@ show_table($results);
 ?-->
 	<div class="lItem">
     	<div class="lDate">
-        	March 28
+        	<p>
+        		November 28
+            </p>
         </div>
         <div class="lSubject">
         	<a href="Link to the listing"><!--this will be listing.subject text-->This is my pretty poodle</a>
