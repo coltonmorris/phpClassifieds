@@ -25,7 +25,7 @@
 			showcontrols    : false,
 			showmarkers     : false,
 			responsive  	: true,
-			usecaprions 	: false
+			usecaptions 	: false
           });
 
         });
