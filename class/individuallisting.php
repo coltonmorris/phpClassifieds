@@ -13,10 +13,10 @@
     	$350
     </div>
     <div class="iSlider">
-    	<a href="images/55colton0.png" rel="shadowbox"><img src="images/55colton0.png"></a>
-        <a href="images/55colton1.png" rel="shadowbox"><img src="images/55colton1.png"></a>
-        <a href="images/55colton2.png" rel="shadowbox"><img src="images/55colton2.png"></a>
-        <a href="images/55colton3.png" rel="shadowbox"><img src="images/55colton3.png"></a>
+    	<a href="images/55colton0.png" rel="shadowbox[i]"><img src="images/55colton0.png"></a>
+        <a href="images/55colton1.png" rel="shadowbox[i]"><img src="images/55colton1.png"></a>
+        <a href="images/55colton2.png" rel="shadowbox[i]"><img src="images/55colton2.png"></a>
+        <a href="images/55colton3.png" rel="shadowbox[i]"><img src="images/55colton3.png"></a>
     </div>
     <div class="iDescription">
     	Big words scare me!
