@@ -28,13 +28,14 @@ if (isset($_POST['new_user'])){
 			{
 				echo "you must use your dmail!";
 			}
-			else if ($password != $passconfirm){
+			elseif ($password != $passconfirm){
 				echo "Passwords do not match!";
 			}
 			else
 			{
 				echo add_user($username,$password,$email,$RoleID);
 			}
+			exit;
 		}
 		else {
 			echo "Not a valid email, please use your dmail!";
