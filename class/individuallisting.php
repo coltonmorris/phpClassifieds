@@ -12,7 +12,9 @@
     <div class="iCost">
     	$350
     </div>
-    	<a href="images/55colton0.png" rel="shadowbox">colton</a>
+    <div class="iSlider">
+    	<a href="images/55colton0.png" rel="shadowbox"><img src="images/55colton0.png"></a>
+    </div>
     <div class="iDescription">
     	Big words scare me!
     </div>
