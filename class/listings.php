@@ -1,6 +1,6 @@
 <?php include_once('head.php');?>
 <div id="middlecolumn">
-<form action="<?$_SERVER['PHP_SELF']?>" method="POST">
+<form action="<?$_SERVER['PHP_SELF']?>" method="GET">
 		<label for="subject">Keyword:</label> 
         <input type="text" name="keyword" maxlength="68"><br><br>
         <script type="text/javascript">
@@ -36,15 +36,19 @@
 		<label for="subcatagory">*Subcategory:</label>
         <select name ="subcatagory" required id="subcats" class="catsize">
 		</select><br><br>
-		<input type="submit" name="Search" value="Post Ad">
-
+		<input type="submit" name="submit" value="Search">
 </form>
 </div>
 
 <?php
+if (!isset($_GET)){
 $query = "select id,date,subject,cost,image_count from listings";
 $results = do_query($query);
 show_listings($results);
+}
+else{
+
+}
 ?>
 <!--
    <div class="lItem">
