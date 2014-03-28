@@ -111,7 +111,7 @@ function show_listings_admin($results) {
 				}
 			}
 
-		//echo "<td><a href=delete_job.php?id=$id>delete</a></td>";
+		echo "<td><a href=delete_job.php?id=$id>delete</a></td>";
 		echo "</div>";
 	}
 	echo "</div>";
