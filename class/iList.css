@@ -1,0 +1,48 @@
+.icontent{
+	margin-top:60px;
+	min-width:470px;
+	width:97%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.iSubject{
+	background-color:#BB0632;
+	font-size: 36px;
+	padding:0 20px;
+	color:#FFFBF0;	
+	display:inline-block;
+	font-family: Arial;
+	text-decoration:none;
+	color: #fff;
+	margin-bottom:30px;
+}
+.iSlider{
+	padding: 20px 0 20px 0;	
+}
+.iSlider{
+	list-style:none;
+	list-style-image:none;
+	list-style-type:none;
+}
+.iSlider li{
+	display:inline-block;
+	padding:5px;
+}
+.iSlider img{
+	width: 200px;
+	height: 200px;
+}
+.iCost{
+	padding:10px 0px 10px 0px;
+}
+.iDate{
+	padding:: 10px 0px 10px 0px;
+}
+.iDescription{
+	clear:both;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.iContact{
+	padding: 10px 0px 10px 0px;
+}

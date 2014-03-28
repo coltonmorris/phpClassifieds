@@ -26,8 +26,8 @@
             animspeed       : 30000,
 			showcontrols    : false,
 			showmarkers     : false,
-			responsive  	: true,
-			usecaprions 	: false
+			responsive  	: false,
+			usecaptions 	: false
           });
 
         });
