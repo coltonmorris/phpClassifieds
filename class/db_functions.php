@@ -51,20 +51,20 @@ function search_function(){
 	echo "</form>";
 
 	if (isset($_GET['submit'])){
-	$keyword = $_GET['keyword'];
-	$query= "select id,date,subject,cost,image_count from listings where 
-				(description like '%$keyword%' or subject like '%$keyword%')";
-	//$catagory = $_GET['catagory'];
-	//$subcatagory = $_GET['subcatagory'];
-	//$query = "select id,date,subject,cost,image_count from listings where description like '%$keyword%'
-	//					and catagory='$catagory' and subcatagory='$subcatagory'";
-	$results = do_query($query);
-	show_listings($results);
-	}
+		$keyword = $_GET['keyword'];
+		$query= "select id,date,subject,cost,image_count from listings where 
+					(description like '%$keyword%' or subject like '%$keyword%')";
+		//$catagory = $_GET['catagory'];
+		//$subcatagory = $_GET['subcatagory'];
+		//$query = "select id,date,subject,cost,image_count from listings where description like '%$keyword%'
+		//					and catagory='$catagory' and subcatagory='$subcatagory'";
+		$results = do_query($query);
+		show_listings($results);
+		}
 	else{
-	$query = "select id,date,subject,cost,image_count from listings";
-	$results = do_query($query);
-	show_listings($results);
+//	$query = "select id,date,subject,cost,image_count from listings";
+//	$results = do_query($query);
+//	show_listings($results);
 	}
 }
 
