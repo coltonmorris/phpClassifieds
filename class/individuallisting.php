@@ -56,6 +56,8 @@ while ($row = mysqli_fetch_assoc($results)){
 		else if ($k == 'username'){
 			$username = $val;
 		}
+	}
+}
 //prepare the slider
 //get the amount of images
 $query = "select image_count from listings where id='$id'";
