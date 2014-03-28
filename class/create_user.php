@@ -36,6 +36,9 @@ if (isset($_POST['new_user'])){
 				echo add_user($username,$password,$email,$RoleID);
 			}
 		}
+		else {
+			echo "Not a valid email, please use your dmail!";
+		}
 }
 ?>
 </div>
