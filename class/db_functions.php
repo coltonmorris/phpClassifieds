@@ -47,7 +47,6 @@ function search_function(){
 	echo "		<input type='submit' name='submit' value='Search'>";
 	echo "</form>";
 
-	print_r($_GET);
 	if (isset($_GET['submit'])){
 	$keyword = $_GET['keyword'];
 	$query= "select id,date,subject,cost,image_count from listings where 
