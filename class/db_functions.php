@@ -63,7 +63,7 @@ function show_listings($results) {
 				}
 				else if ($k == 'image_count'){
 					//camera only displays if listings has a picture
-					if ($k > 0){
+					if ($val > 0){
 					echo "<div class='lPicture'>";
 					echo "<img src='camera.png'>";
 					echo "</div>";
