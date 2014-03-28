@@ -1,6 +1,5 @@
 <?php include_once('head.php');?>
 <div id="middlecolumn">
-Search
 <form action="<?$_SERVER['PHP_SELF']?>" method="POST">
 		<label for="subject">Keyword:</label> 
         <input type="text" name="keyword" maxlength="68"><br><br>
@@ -37,6 +36,7 @@ Search
 		<label for="subcatagory">*Subcategory:</label>
         <select name ="subcatagory" required id="subcats" class="catsize">
 		</select><br><br>
+		<input type="submit" name="Search" value="Post Ad">
 
 </form>
 </div>
