@@ -16,10 +16,12 @@ if (!isset($_SESSION['allow'])){
 <link rel="stylesheet" href="bjqs.css">
 <link rel="stylesheet" href="slider.css">
 <link rel="stylesheet" href="foot.css">
-<!-- load jQuery and the plugin -->
+<link rel="stylesheet" href="shadowbox.css">
+<!-- load jQuery and the plugins -->
 	<!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="js/bjqs-1.3.min.js"></script>
+    <script src="js/shadowbox.js"></script>
 <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>

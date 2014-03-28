@@ -1,6 +1,28 @@
 <?php include_once('head.php');?>
-<div>
-<?php 
+<script type="text/javascript">
+	Shadowbox.init();
+</script>
+<div class="content">
+	<div class="listheads">
+    	OMG sell books!
+    </div>
+    <div class="iDate">
+    	December 31
+    </div>
+    <div class="iCost">
+    	$350
+    </div>
+    <div class="iSlider">
+    	<a href="images/55colton0.png" rel="shadowbox">colton</a>
+    </div>
+    <div class="iDescription">
+    	Big words scare me!
+    </div>
+    <div class="iContact">
+    	four three five
+    </div>
+</div>
+<!--?php 
 $id = $_GET['id'];
 $query = "select * from listings where id='$id'";
 $results = do_query($query);
@@ -26,7 +48,7 @@ while ($row = mysqli_fetch_assoc($results)){
 		}
 	}
 }
-?>
+?-->
 </div>
 
 <?php include_once('foot.php'); ?>
