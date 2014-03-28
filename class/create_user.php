@@ -15,8 +15,20 @@ if (isset($_POST['new_user'])){
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		$email = $_POST['email'];
+		$allowed_domain = array('dmail.dixie.edu');
 		$RoleID = 0;
-		echo add_user($username,$password,$email,$RoleID);
+		if (filter_var($email, FILTER_VALIDATE_EMAIL))
+		{
+			$domain = array_pop(explode('@', $email));
+			if ( ! in_array($domain, $allowed_domain))
+			{
+				echo "you must use your dmail!";
+			}
+			else
+			{
+				echo add_user($username,$password,$email,$RoleID);
+			}
+		}
 }
 ?>
 </p>
