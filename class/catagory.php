@@ -5,7 +5,7 @@
 $catagory = $_GET['catagory'];
 $query = "select * from listings where catagory='$catagory'";
 $results = do_query($query);
-show_table($results);
+show_listings($results);
 ?>
 </div>
 

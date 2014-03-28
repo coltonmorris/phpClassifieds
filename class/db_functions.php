@@ -104,7 +104,7 @@ function show_listings($results) {
 				if ($k == 'date') {
 					echo "<div class='lDate'>";
 					echo "<p>";
-					echo date("F d",$val);
+					echo timestamp_to_date($val);
 					echo "</p>";
 					echo "</div>";
 				} 
