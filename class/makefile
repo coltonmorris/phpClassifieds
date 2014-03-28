@@ -1,5 +1,5 @@
 run:
 	git pull
 	git add -u
-	git commit -m "fixing image count uploading"
+	git commit -m "search bar function"
 	git push
