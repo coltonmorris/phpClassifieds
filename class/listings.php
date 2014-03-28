@@ -23,7 +23,6 @@
 		</script>
 		<label for="catagory">*Category:</label>
         <select name ="catagory" required id="cSelect" class="catsize">
-				<!-- this list will be pulled from the database -->
              <option></option>
 			 <?php 
 				$query = "select name from catagories";
