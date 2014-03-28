@@ -9,7 +9,7 @@ $username = $_SESSION['username'];
 $password = $_SESSION['password'];
 $query = "select * from listings";
 $results = do_query($query);
-show_job_admin($results);
+show_listings_admin($results);
 echo "<hr>";
 echo "<div class='listheads'>Users</div>";
 $query = "select * from users";

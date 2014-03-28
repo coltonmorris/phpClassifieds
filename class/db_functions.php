@@ -74,6 +74,48 @@ function show_listings($results) {
 	}
 	echo "</div>";
 }
+function show_listings_admin($results) {
+	echo "<div id='listings'>";
+	while ($row = mysqli_fetch_assoc($results)) {
+		echo "<div class='lItem'>";
+			foreach ($row as $k => $val) {
+			//id is populated first, so there will be no problems with the subject
+				if ($k == 'id'){
+					$link = "individuallisting.php?id=$val";
+				}
+				if ($k == 'date') {
+					echo "<div class='lDate'>";
+					echo "<p>";
+					echo date("F d",$val);
+					echo "</p>";
+					echo "</div>";
+				} 
+				//subject is the link to the actual listing
+				else if ($k == 'subject'){
+					echo "<div class='lSubject'>";
+					echo "<a href=$link>$val</a>";
+					echo "</div>";
+				}
+				else if ($k == 'cost'){
+					echo "<div class='lCost'>";
+					echo "$val";
+					echo "</div>";
+				}
+				else if ($k == 'image_count'){
+					//camera only displays if listings has a picture
+					if ($val > 0){
+					echo "<div class='lPicture'>";
+					echo "<img src='camera.png'>";
+					echo "</div>";
+					}
+				}
+			}
+
+		echo "<td><a href=delete_job.php?id=$id>delete</a></td>";
+		echo "</div>";
+	}
+	echo "</div>";
+}
 function show_job_admin($results) {
     echo "<table class='listing'>";
     while ($row = mysqli_fetch_assoc($results)) {
@@ -85,6 +127,7 @@ function show_job_admin($results) {
             if ($k == 'email') {
                 echo "<td><a href=mailto:$val>$val</a></td>";
             } 
+
 						else {
                 echo "<td>$val</td>";
             }
