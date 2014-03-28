@@ -41,6 +41,7 @@
 </div>
 
 <?php
+print_r($_GET);
 if (!isset($_GET['submit'])){
 $query = "select id,date,subject,cost,image_count from listings";
 $results = do_query($query);
