@@ -20,12 +20,12 @@ if (!isset($_SESSION['allow'])){
 	<!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="js/bjqs-1.3.min.js"></script>
-<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>
 <div id="wrapper">
         <div id="navwrapper">
-            <a href="index.php"><img src="images/logo.png" id="homebutton" alt="DIXIE Classifieds"></a>
+            <a href="index.php"><img src="logo.png" id="homebutton" alt="DIXIE Classifieds"></a>
             <nav id="nav">
                 <a href="index.php" class="buttons">Home</a>
                 <a href="listings.php" class="buttons" id="level2button">Listings</a>
