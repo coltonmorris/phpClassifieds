@@ -81,9 +81,9 @@ echo "</div>";
 echo "<div class='iSlider'>";
 echo '<ul>';
 $images = array($image_0,$image_1,$image_2,$image_3);
-echo $image_count;
 foreach($images as $image=>$val){
-	if ($image_count >= 0){
+echo $image_count;
+	if ($image_count > 0){
 	//echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
 	//echo "<img src='$val'>";
 	echo "worked.";
