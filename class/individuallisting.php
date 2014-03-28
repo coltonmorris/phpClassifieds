@@ -82,15 +82,15 @@ while ($row = mysqli_fetch_assoc($results)){
 		else if ($k == 'image_3'&& $count > 0){
 			echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
 		}
-		count --;
+		count;
 	}
 }
 echo "</ul>";
 echo "</div>";
-echo "<div class='iDescription'">;
+echo "<div class='iDescription'>";
 echo $description;
 echo "</div>";
-echo "<div class='iContact'">;
+echo "<div class='iContact'>";
 echo "four three five";
 echo "</div>";
 ?>

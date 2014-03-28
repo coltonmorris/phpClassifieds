@@ -24,7 +24,7 @@
             width       	: $('#container').width(),
 			showcontrols    : false,
 			showmarkers     : false,
-			responsive  	: true,
+			responsive  	: false,
 			usecaptions 	: false
           });
 
