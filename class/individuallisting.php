@@ -31,24 +31,19 @@
 <?php 
 $id = $_GET['id'];
 //prepare the subject, date, and cost
-$query = "select subject,date,cost,description,username from listings where id='$id'";
+//$query = "select subject,date,cost,description,username from listings where id='$id'";
+$query = "select * from listings where id='$id'";
 $results = do_query($query);
 while ($row = mysqli_fetch_assoc($results)){
 	foreach ($row as $k =>$val){
 		if ($k == 'subject'){
-			echo "<div class='iSubject'>";
-			echo "$val";
-			echo "</div>";
+			$subject = $val;
 		}
 		else if ($k == 'date'){
-			echo "<div class='iDate'>";
-			echo "$val";
-			echo "</div>";
+			$date = $val;
 		}
 		else if ($k == 'cost'){
-			echo "<div class='iCost'>";
-			echo "$val";
-			echo "</div>";
+			$cost = $val;
 		}
 		else if ($k == 'description'){
 			$description = $val;
@@ -56,43 +51,79 @@ while ($row = mysqli_fetch_assoc($results)){
 		else if ($k == 'username'){
 			$username = $val;
 		}
+		else if ($k == 'image_count'){
+			$image_count = $val;
+		}
+		else if ($k == 'image_0'){
+			$image_0 = $val;
+		}
+		else if ($k == 'image_1'){
+			$image_1 = $val;
+		}
+		else if ($k == 'image_2'){
+			$image_2 = $val;
+		}
+		else if ($k == 'image_3'){
+			$image_3 = $val;
+		}
 	}
 }
-//prepare the slider
-//get the amount of images
-$query = "select image_count from listings where id='$id'";
-$results = do_query($query);
-$row = mysqli_fetch_assoc($results);
-$count = $row[0];
-$query = "select * from listings where id='$id'";
-$results = do_query($query);
+
+echo "<div class='iSubject'>";
+echo "$subject";
+echo "</div>";
+echo "<div class='iDate'>";
+echo "$date";
+echo "</div>";
+echo "<div class='iCost'>";
+echo "$cost";
+echo "</div>";
 echo "<div class='iSlider'>";
 echo '<ul>';
-while ($row = mysqli_fetch_assoc($results)){
-	foreach ($row as $k =>$val){
-		if ($k == 'image_0'&& $count > 0){
-			echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
-		}
-		else if ($k == 'image_1'&& $count > 0){
-			echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
-		}
-		else if ($k == 'image_2'&& $count > 0){
-			echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
-		}
-		else if ($k == 'image_3'&& $count > 0){
-			echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
-		}
-		count;
+$images = array($image_0,$image_1,$image_2,$image_3);
+foreach($images as $image=>$val){
+	if ($val == 0){
+		echo "it is null";
+	}
+	else {
+		echo "it is not null YOOO";
+	//echo "<li><a href='$image_0' rel='shadowbox[i]'><img src ='$image_0'></a></li>";
 	}
 }
-echo "</ul>";
-echo "</div>";
-echo "<div class='iDescription'>";
-echo $description;
-echo "</div>";
-echo "<div class='iContact'>";
-echo "four three five";
-echo "</div>";
+
+//prepare the slider
+//get the amount of images
+//$query = "select image_count from listings where id='$id'";
+//$results = do_query($query);
+//$row = mysqli_fetch_assoc($results);
+//$count = $row[0];
+//$query = "select * from listings where id='$id'";
+//$results = do_query($query);
+//while ($row = mysqli_fetch_assoc($results)){
+//	foreach ($row as $k =>$val){
+//		if ($k == 'image_0'&& $count > 0){
+//			echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
+//		}
+//		else if ($k == 'image_1'&& $count > 0){
+//			echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
+//		}
+//		else if ($k == 'image_2'&& $count > 0){
+//			echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
+//		}
+//		else if ($k == 'image_3'&& $count > 0){
+//			echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
+//		}
+//		count;
+//	}
+//}
+//echo "</ul>";
+//echo "</div>";
+//echo "<div class='iDescription'>";
+//echo $description;
+//echo "</div>";
+//echo "<div class='iContact'>";
+//echo "four three five";
+//echo "</div>";
 ?>
 </div>
 
