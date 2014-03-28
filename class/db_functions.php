@@ -14,9 +14,16 @@ function timestamp_to_date($timestamp){
 	return date('F d',strtotime($timestamp));
 }
 function search_function(){
-	echo "<form action='<?$_SERVER[PHP_SELF]?>' method='POST'>";
-	echo "		<label for='subject'>Keyword:</label> ";
-	echo "        <input type='text' name='keyword' maxlength='68'><br><br>";
+	$catagory = $_GET['catagory'];
+	echo "<form action='<?$_SERVER[PHP_SELF]?>' method='GET'>";
+	echo "	<label for='subject'>Keyword:</label> ";
+	echo "  <input type='text' name='keyword' maxlength='68'><br><br>";
+	echo "	<input type='text' name='catagory' value='<?$catagory?>'><br><br>";
+	if (isset($_GET['subcatagory'])){
+		$subcatagory = $_GET['subcatagory'];
+	echo "	<input type='text'
+					name='subcatagory' value='<?$subcatagory?>'><br><br>";
+	}
 //	echo "        <script type='text/javascript'>";
 //	echo "			$(document).ready(function() {";
 //	echo "				//alert('Document is ready');";
