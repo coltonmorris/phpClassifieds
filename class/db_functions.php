@@ -15,7 +15,7 @@ function timestamp_to_date($timestamp){
 }
 function search_function(){
 	$catagory = $_GET['catagory'];
-	echo "<form action='<?=$_SERVER[PHP_SELF]?>' method='GET'>";
+	echo "<form action='$_SERVER[PHP_SELF]' method='GET'>";
 	echo "	<label for='subject'>Keyword:</label> ";
 	echo "  <input type='text' name='keyword' maxlength='68'><br><br>";
 	echo "	<input type='text' name='catagory' value='$catagory'><br><br>";
