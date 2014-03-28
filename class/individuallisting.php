@@ -83,7 +83,8 @@ echo '<ul>';
 $images = array($image_0,$image_1,$image_2,$image_3);
 foreach($images as $image=>$val){
 	if ($val != 0){
-	echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
+	//echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
+	echo "<img src='$val'>";
 	}
 }
 echo '</ul>';
