@@ -82,15 +82,18 @@ echo "<div class='iSlider'>";
 echo '<ul>';
 $images = array($image_0,$image_1,$image_2,$image_3);
 foreach($images as $image=>$val){
-	echo "$image and $val \n";
-	if ($val == 0){
-		echo "it is null";
-	}
-	else {
-		echo "it is not null YOOO";
-	//echo "<li><a href='$image_0' rel='shadowbox[i]'><img src ='$image_0'></a></li>";
+	if ($val != 0){
+	echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
 	}
 }
+echo '</ul>';
+echo "<div class='iDescription'>";
+echo $description;
+echo "</div>";
+echo "<div class='iContact'>";
+echo "801-505-66666666";
+echo "</div>";
+
 
 //prepare the slider
 //get the amount of images
