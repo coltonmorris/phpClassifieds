@@ -47,7 +47,7 @@ $results = do_query($query);
 show_listings($results);
 }
 else{
-
+echo "test";
 }
 ?>
 <!--
