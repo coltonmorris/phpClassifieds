@@ -32,8 +32,10 @@
 	height: 200px;
 }
 .iCost{
+	padding:10px 0px 10px 0px;
 }
 .iDate{
+	padding:: 10px 0px 10px 0px;
 }
 .iDescription{
 	clear:both;
@@ -41,4 +43,5 @@
 	padding-bottom:20px;
 }
 .iContact{
+	padding: 10px 0px 10px 0px;
 }
