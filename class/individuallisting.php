@@ -87,7 +87,7 @@ foreach($images as $image=>$val){
 	echo "<img src='$val'>";
 	}
 	else{
-		echo "failed, $image. ";
+		echo "failed, $image, $val. ";
 	}
 }
 echo '</ul>';
