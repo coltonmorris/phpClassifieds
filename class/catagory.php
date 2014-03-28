@@ -1,4 +1,5 @@
 <?php include_once('head.php');?>
+<?php search_function();?>
 <div id="listings">
 <?php 
 $catagory = $_GET['catagory'];
