@@ -116,27 +116,6 @@ function show_listings_admin($results) {
 	}
 	echo "</div>";
 }
-function show_job_admin($results) {
-    echo "<table class='listing'>";
-    while ($row = mysqli_fetch_assoc($results)) {
-        echo "<tr>";
-        foreach ($row as $k => $val) {
-						if ($k == 'id'){
-								$id = $val;
-						}
-            if ($k == 'email') {
-                echo "<td><a href=mailto:$val>$val</a></td>";
-            } 
-
-						else {
-                echo "<td>$val</td>";
-            }
-        }
-				echo "<td><a href=delete_job.php?id=$id>delete</a></td>";
-        echo "</tr>";
-    }
-    echo "</table>";
-}
 function show_user_admin($results) {
     echo "<table>";
     while ($row = mysqli_fetch_assoc($results)) {

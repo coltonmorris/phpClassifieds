@@ -1,6 +1,5 @@
-<?php include_once('head.php'); ?>
-<div id="middlecolumn">
-<?php
+<?php 
+include_once('head.php');
 if (!isset($_SESSION['control_panel']) || $_SESSION['control_panel'] != 'admin_control.php'){
 	header('Location: index.php');
 }
