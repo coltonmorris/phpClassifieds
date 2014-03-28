@@ -21,8 +21,8 @@
                 });
             });
 		</script>
-		<label for="catagory">*Category:</label>
-        <select name ="catagory" required id="cSelect" class="catsize">
+		<label for="catagory">Category:</label>
+        <select name ="catagory" id="cSelect" class="catsize">
              <option></option>
 			 <?php 
 				$query = "select name from catagories";
@@ -32,8 +32,8 @@
 					} 
 				?>
 		</select><br><br>
-		<label for="subcatagory">*Subcategory:</label>
-        <select name ="subcatagory" required id="subcats" class="catsize">
+		<label for="subcatagory">Subcategory:</label>
+        <select name ="subcatagory" id="subcats" class="catsize">
 		</select><br><br>
 		<input type="submit" name="submit" value="Search">
 </form>
