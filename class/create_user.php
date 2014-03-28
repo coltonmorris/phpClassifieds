@@ -17,10 +17,6 @@ if (isset($_POST['new_user'])){
 		$email = $_POST['email'];
 		$allowed_domain = array('dmail.dixie.edu');
 		$RoleID = 0;
-		if ($password != $passconfirm){
-			echo "Passwords do not match!";
-			break;
-		}
 		if (filter_var($email, FILTER_VALIDATE_EMAIL))
 		{
 			$domain = array_pop(explode('@', $email));
