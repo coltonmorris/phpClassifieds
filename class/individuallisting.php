@@ -3,17 +3,20 @@
 	Shadowbox.init();
 </script>
 <div class="content">
-	<div class="listheads">
+	<div class="iSubject">
     	OMG sell books!
     </div>
     <div class="iDate">
-    	December 31
+    	Posted on: December 31
     </div>
     <div class="iCost">
     	$350
     </div>
     <div class="iSlider">
     	<a href="images/55colton0.png" rel="shadowbox"><img src="images/55colton0.png"></a>
+        <a href="images/55colton1.png" rel="shadowbox"><img src="images/55colton1.png"></a>
+        <a href="images/55colton2.png" rel="shadowbox"><img src="images/55colton2.png"></a>
+        <a href="images/55colton3.png" rel="shadowbox"><img src="images/55colton3.png"></a>
     </div>
     <div class="iDescription">
     	Big words scare me!

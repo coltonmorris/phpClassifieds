@@ -1,0 +1,37 @@
+.icontent{
+	margin-top:60px;
+	min-width:470px;
+	width:97%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.iSubject{
+	background-color:#BB0632;
+	font-size: 36px;
+	padding:0 20px;
+	color:#FFFBF0;	
+	display:inline-block;
+	font-family: Arial;
+	text-decoration:none;
+	color: #fff;
+}
+.iSlider{
+	margin-left:auto;
+	margin-right:auto;	
+}
+.iSlider img{
+	width: 200px;
+	height: 200px;
+	float:left;
+	padding: 5px;
+}
+.iCost{
+}
+.iDate{
+}
+.iDescription{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.iContact{
+}
