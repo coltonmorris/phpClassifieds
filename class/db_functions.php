@@ -10,6 +10,9 @@ function do_query($query){
 	return $results; 
 }
 
+function timestamp_to_date($timestamp){
+	return date('F d',$timestamp);
+}
 function search_function(){
 	echo "<form action='<?$_SERVER[PHP_SELF]?>' method='GET'>";
 	echo "		<label for='subject'>Keyword:</label> ";
