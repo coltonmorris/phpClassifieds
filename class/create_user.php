@@ -13,7 +13,7 @@ if (isset($_POST['new_user'])){
 		logout();
 		$username = $_POST['username'];
 		$password = md5($_POST['password'].$_POST['username']);
-		$passconfirm = md5($_POST['password'].$_POST['username']);
+		$passconfirm = md5($_POST['confirm'].$_POST['username']);
 		$email = $_POST['email'];
 		$allowed_domain = array('dmail.dixie.edu');
 		$RoleID = 0;
