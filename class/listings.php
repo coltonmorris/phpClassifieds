@@ -3,7 +3,7 @@
 <form action="<?$_SERVER['PHP_SELF']?>" method="GET">
 		<label for="subject">Keyword:</label> 
         <input type="text" name="keyword" maxlength="68"><br><br>
- <!--       <script type="text/javascript">
+        <script type="text/javascript">
 			$(document).ready(function() {
 				//alert('Document is ready');
                 $('#cSelect').change(function() {
@@ -35,7 +35,6 @@
 		<label for="subcatagory">*Subcategory:</label>
         <select name ="subcatagory" required id="subcats" class="catsize">
 		</select><br><br>
-		-->
 		<input type="submit" name="submit" value="Search">
 </form>
 </div>
@@ -44,6 +43,8 @@
 print_r($_GET);
 if (isset($_GET['submit'])){
 $keyword = $_GET['keyword'];
+$catagory = $_GET['catagory'];
+$subcatagory = $_GET['subcatagory'];
 $query = "select * from listings where description like '%$keyword%'";
 $results = do_query($query);
 show_listings($results);
