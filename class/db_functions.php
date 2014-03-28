@@ -31,7 +31,7 @@ function search_function(){
 //	echo "                    });";
 //	echo "                });";
 //	echo "            });";
-//	echo "		</script>";
+//	echo "		<//script>";
 //	echo "		<label for='catagory'>Category:</label>";
 //	echo "        <select name ='catagory' id='cSelect' class='catsize'>";
 //	echo "             <option></option>";
