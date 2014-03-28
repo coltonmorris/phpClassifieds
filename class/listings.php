@@ -5,6 +5,7 @@ $query = "select id,date,subject,cost,image_count from listings";
 $results = do_query($query);
 show_listings($results);
 ?>
+<!--
    <div class="lItem">
     	<div class="lDate">
         	<p>
@@ -12,15 +13,15 @@ show_listings($results);
             </p>
         </div>
         <div class="lSubject">
-        	<a href="Link to the listing"><!--this will be listing.subject text-->Humanities 3400 text book for sale</a>
+        	<a href="Link to the listing">Humanities 3400 text book for sale</a>
         </div>
         <div class="lCost">
         	$8000
         </div>
         <div class="lPicture">
-        	<img src="camera.png"> <!--Only diplays if listing has a picture-->
+        	<img src="camera.png"> 
         </div>
     </div>
-</div> 
+</div> -->
 
 <?php include_once('foot.php'); ?>
