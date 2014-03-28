@@ -45,6 +45,8 @@ print_r($_GET);
 if (isset($_GET['submit'])){
 $keyword = $_GET['keyword'];
 $query = "select id,date,subject,cost,image_count from listings where description like %$keyword%";
+$results = do_query($query);
+show_listings($results);
 }
 else{
 $query = "select id,date,subject,cost,image_count from listings";
