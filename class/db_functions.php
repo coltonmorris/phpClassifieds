@@ -46,7 +46,6 @@ echo "        <select name ='subcatagory' id='subcats' class='catsize'>";
 echo "		</select><br><br>";
 echo "		<input type='submit' name='submit' value='Search'>";
 echo "</form>";
-echo "</div>";
 
 print_r($_GET);
 if (isset($_GET['submit'])){

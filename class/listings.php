@@ -1,5 +1,4 @@
 <?php include_once('head.php');?>
-<div id="middlecolumn">
 <? search_function(); ?>
 <!--
    <div class="lItem">
