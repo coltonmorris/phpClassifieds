@@ -3,7 +3,7 @@
 <form action="<?$_SERVER['PHP_SELF']?>" method="GET">
 		<label for="subject">Keyword:</label> 
         <input type="text" name="keyword" maxlength="68"><br><br>
-        <script type="text/javascript">
+ <!--       <script type="text/javascript">
 			$(document).ready(function() {
 				//alert('Document is ready');
                 $('#cSelect').change(function() {
@@ -36,6 +36,7 @@
 		<label for="subcatagory">*Subcategory:</label>
         <select name ="subcatagory" required id="subcats" class="catsize">
 		</select><br><br>
+		-->
 		<input type="submit" name="submit" value="Search">
 </form>
 </div>
