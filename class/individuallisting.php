@@ -86,6 +86,9 @@ foreach($images as $image=>$val){
 	//echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
 	echo "<img src='$val'>";
 	}
+	else{
+		echo "failed, $image. ";
+	}
 }
 echo '</ul>';
 echo "<div class='iDescription'>";
