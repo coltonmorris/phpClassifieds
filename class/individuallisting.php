@@ -82,10 +82,8 @@ echo "<div class='iSlider'>";
 echo '<ul>';
 $images = array($image_0,$image_1,$image_2,$image_3);
 foreach($images as $image=>$val){
-echo $image_count;
 	if ($image_count > 0){
-	//echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
-	echo "<img src='$val'>";
+	echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
 	}
 	else{
 		//echo "failed, $image, $val. ";
