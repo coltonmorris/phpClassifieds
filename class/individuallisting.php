@@ -84,7 +84,8 @@ $images = array($image_0,$image_1,$image_2,$image_3);
 foreach($images as $image=>$val){
 	if ($image_count < 0){
 	//echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
-	echo "<img src='$val'>";
+	//echo "<img src='$val'>";
+	echo "worked.";
 	}
 	else{
 		echo "failed, $image, $val. ";
