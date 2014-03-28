@@ -10,6 +10,63 @@ function do_query($query){
 	return $results; 
 }
 
+function search_function(){
+echo "<form action='<?$_SERVER[PHP_SELF]?>' method='GET'>";
+echo "		<label for='subject'>Keyword:</label> ";
+echo "        <input type='text' name='keyword' maxlength="68"><br><br>";
+echo "        <script type='text/javascript'>";
+echo "			$(document).ready(function() {";
+echo "				//alert('Document is ready');";
+echo "                $('#cSelect').change(function() {";
+echo "                    var sel = $(this).val();";
+echo "					//alert('You picked: ' + sel);";
+echo "                    $.ajax({";
+echo "                        type: 'POST',";
+echo "                        url: 'subcat.php', // 'another_php_file.php',";
+echo "                        data: 'selected=' + sel,";
+echo "                        success: function(data) {";
+echo "						//alert('Server-side response: ' + data);";
+echo "                            $('#subcats').html(data);";
+echo "                        }";
+echo "                    });";
+echo "                });";
+echo "            });";
+echo "		</script>";
+echo "		<label for='catagory'>Category:</label>";
+echo "        <select name ='catagory' id='cSelect' class='catsize'>";
+echo "             <option></option>";
+				$query = "select name from catagories";
+				$results = do_query($query);
+				while ($row = mysqli_fetch_row($results)){
+					echo "$row[0]:<option value='$row[0]'>$row[0]</option>";
+					} 
+echo "		</select><br><br>";
+echo "		<label for='subcatagory'>Subcategory:</label>";
+echo "        <select name ='subcatagory' id='subcats' class='catsize'>";
+echo "		</select><br><br>";
+echo "		<input type='submit' name='submit' value='Search'>";
+echo "</form>";
+echo "</div>";
+
+print_r($_GET);
+if (isset($_GET['submit'])){
+$keyword = $_GET['keyword'];
+$query= "select id,date,subject,cost,image_count from listings where 
+			(description like '%$keyword%' or subject like '%$keyword%')";
+//$catagory = $_GET['catagory'];
+//$subcatagory = $_GET['subcatagory'];
+//$query = "select id,date,subject,cost,image_count from listings where description like '%$keyword%'
+//					and catagory='$catagory' and subcatagory='$subcatagory'";
+$results = do_query($query);
+show_listings($results);
+}
+else{
+$query = "select id,date,subject,cost,image_count from listings";
+$results = do_query($query);
+show_listings($results);
+}
+}
+
 function show_catagories($results) {
 	//loop through each catagory
 	while ($row = mysqli_fetch_row($results)){

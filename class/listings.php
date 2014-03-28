@@ -1,63 +1,6 @@
 <?php include_once('head.php');?>
 <div id="middlecolumn">
-<form action="<?$_SERVER['PHP_SELF']?>" method="GET">
-		<label for="subject">Keyword:</label> 
-        <input type="text" name="keyword" maxlength="68"><br><br>
-        <script type="text/javascript">
-			$(document).ready(function() {
-				//alert('Document is ready');
-                $('#cSelect').change(function() {
-                    var sel = $(this).val();
-					//alert('You picked: ' + sel);
-                    $.ajax({
-                        type: "POST",
-                        url: "subcat.php", // "another_php_file.php",
-                        data: 'selected=' + sel,
-                        success: function(data) {
-						//alert('Server-side response: ' + data);
-                            $('#subcats').html(data);
-                        }
-                    });
-                });
-            });
-		</script>
-		<label for="catagory">Category:</label>
-        <select name ="catagory" id="cSelect" class="catsize">
-             <option></option>
-			 <?php 
-				$query = "select name from catagories";
-				$results = do_query($query);
-				while ($row = mysqli_fetch_row($results)){
-					echo "$row[0]:<option value='$row[0]'>$row[0]</option>";
-					} 
-				?>
-		</select><br><br>
-		<label for="subcatagory">Subcategory:</label>
-        <select name ="subcatagory" id="subcats" class="catsize">
-		</select><br><br>
-		<input type="submit" name="submit" value="Search">
-</form>
-</div>
-
-<?php
-print_r($_GET);
-if (isset($_GET['submit'])){
-$keyword = $_GET['keyword'];
-$query= "select id,date,subject,cost,image_count from listings where 
-			(description like '%$keyword%' or subject like '%$keyword%')";
-//$catagory = $_GET['catagory'];
-//$subcatagory = $_GET['subcatagory'];
-//$query = "select id,date,subject,cost,image_count from listings where description like '%$keyword%'
-//					and catagory='$catagory' and subcatagory='$subcatagory'";
-$results = do_query($query);
-show_listings($results);
-}
-else{
-$query = "select id,date,subject,cost,image_count from listings";
-$results = do_query($query);
-show_listings($results);
-}
-?>
+<? search_function(); ?>
 <!--
    <div class="lItem">
     	<div class="lDate">
