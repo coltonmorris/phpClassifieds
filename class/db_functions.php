@@ -170,7 +170,7 @@ function add_user($username,$password,$email,$RoleID){
 							'$password','$email',$RoleID)";
 			do_query($query);
 			$results = login($username,$password);
-			$results .=", and your account has been created, thank you.";
+			$results .="Your account has been created, thank you.";
 	}
 	return $results;
 }
