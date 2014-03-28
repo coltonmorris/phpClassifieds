@@ -14,7 +14,7 @@ function timestamp_to_date($timestamp){
 	return date('F d',strtotime($timestamp));
 }
 function search_function(){
-	echo "<form action='<?$_SERVER[PHP_SELF]?>' method='GET'>";
+	echo "<form action='<?$_SERVER[PHP_SELF]?>' method='POST'>";
 	echo "		<label for='subject'>Keyword:</label> ";
 	echo "        <input type='text' name='keyword' maxlength='68'><br><br>";
 //	echo "        <script type='text/javascript'>";
@@ -50,8 +50,8 @@ function search_function(){
 	echo "		<input type='submit' name='submit' value='Search'>";
 	echo "</form>";
 
-	if (isset($_GET['submit'])){
-		$keyword = $_GET['keyword'];
+	if (isset($_POST['submit'])){
+		$keyword = $_POST['keyword'];
 		$query= "select id,date,subject,cost,image_count from listings where 
 					(description like '%$keyword%' or subject like '%$keyword%')";
 		//$catagory = $_GET['catagory'];
