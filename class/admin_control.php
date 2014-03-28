@@ -15,5 +15,4 @@ $query = "select * from users";
 $results = do_query($query);
 show_user_admin($results);
 ?>
-</div> <!-- end middlecolumn -->
 <?php include_once('foot.php') ?>

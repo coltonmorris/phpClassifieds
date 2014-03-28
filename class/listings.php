@@ -42,13 +42,12 @@
 
 <?php
 print_r($_GET);
-if (!isset($_GET['submit'])){
+if (isset($_GET['submit'])){
+}
+else{
 $query = "select id,date,subject,cost,image_count from listings";
 $results = do_query($query);
 show_listings($results);
-}
-else{
-echo "test";
 }
 ?>
 <!--
