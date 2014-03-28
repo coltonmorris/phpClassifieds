@@ -5,12 +5,10 @@ if (isset($_GET['submit'])){
 	echo "search function";
 }
 else{
-	echo "not search function";
+	$query = "select * from listings";
+	$results = do_query($query);
+	show_listings($results);
 }
-//
-//$query = "select * from listings";
-//$results = do_query($query);
-//show_listings($results);
 ?>
 <!--
    <div class="lItem">
