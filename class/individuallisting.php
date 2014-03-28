@@ -29,9 +29,8 @@
     </div>
 		-->
 <?php 
+//save all the values so they can be written in any order
 $id = $_GET['id'];
-//prepare the subject, date, and cost
-//$query = "select subject,date,cost,description,username from listings where id='$id'";
 $query = "select * from listings where id='$id'";
 $results = do_query($query);
 while ($row = mysqli_fetch_assoc($results)){
@@ -70,69 +69,32 @@ while ($row = mysqli_fetch_assoc($results)){
 }
 
 echo "<div class='iSubject'>";
-echo "$subject";
+	echo "$subject";
 echo "</div>";
 echo "<div class='iDate'>";
-echo "$date";
+	echo "$date";
 echo "</div>";
 echo "<div class='iCost'>";
-echo "$cost";
+	echo "$cost";
 echo "</div>";
 echo "<div class='iSlider'>";
 echo '<ul>';
+//loop through images, if it is empty, don't do anything
 $images = array($image_0,$image_1,$image_2,$image_3);
 foreach($images as $image=>$val){
 	if ($image_count > 0){
 	echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
 	}
-	else{
-		//echo "failed, $image, $val. ";
-		echo "failed.";
-	}
 	$image_count --;
 }
 echo '</ul>';
 echo "<div class='iDescription'>";
-echo $description;
+	echo $description;
 echo "</div>";
 echo "<div class='iContact'>";
-echo "801-505-66666666";
+	echo "801-505-66666666";
 echo "</div>";
 
-
-//prepare the slider
-//get the amount of images
-//$query = "select image_count from listings where id='$id'";
-//$results = do_query($query);
-//$row = mysqli_fetch_assoc($results);
-//$count = $row[0];
-//$query = "select * from listings where id='$id'";
-//$results = do_query($query);
-//while ($row = mysqli_fetch_assoc($results)){
-//	foreach ($row as $k =>$val){
-//		if ($k == 'image_0'&& $count > 0){
-//			echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
-//		}
-//		else if ($k == 'image_1'&& $count > 0){
-//			echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
-//		}
-//		else if ($k == 'image_2'&& $count > 0){
-//			echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
-//		}
-//		else if ($k == 'image_3'&& $count > 0){
-//			echo "<li><a href='$val' rel='shadowbox[i]'><img src ='$val'></a></li>";
-//		}
-//		count;
-//	}
-//}
-//echo "</ul>";
-//echo "</div>";
-//echo "<div class='iDescription'>";
-//echo $description;
-//echo "</div>";
-//echo "<div class='iContact'>";
-//echo "four three five";
-//echo "</div>";
 ?>
 </div>
 
