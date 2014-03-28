@@ -57,8 +57,8 @@ function search_function(){
 	echo "		<input type='submit' name='submit' value='Search'>";
 	echo "</form>";
 
-	if (isset($_POST['submit'])){
-		$keyword = $_POST['keyword'];
+	if (isset($_GET['submit'])){
+		$keyword = $_GET['keyword'];
 		$query= "select id,date,subject,cost,image_count from listings where 
 					(description like '%$keyword%' or subject like '%$keyword%')";
 		//$catagory = $_GET['catagory'];
@@ -151,7 +151,7 @@ function show_listings_admin($results) {
 				if ($k == 'date') {
 					echo "<div class='lDate'>";
 					echo "<p>";
-					echo date("F d",$val);
+					echo timestamp_to_date($val);
 					echo "</p>";
 					echo "</div>";
 				} 
