@@ -18,7 +18,7 @@ function search_function(){
 	echo "<form action='<?=$_SERVER[PHP_SELF]?>' method='GET'>";
 	echo "	<label for='subject'>Keyword:</label> ";
 	echo "  <input type='text' name='keyword' maxlength='68'><br><br>";
-	echo "	<input type='text' name='catagory' value='<?=$catagory?>'><br><br>";
+	echo "	<input type='text' name='catagory' value=<?=$catagory?>><br><br>";
 	if (isset($_GET['subcatagory'])){
 		$subcatagory = $_GET['subcatagory'];
 	echo "	<input type='text'
