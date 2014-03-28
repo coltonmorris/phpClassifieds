@@ -94,12 +94,6 @@ label{
 	width:31%;
 	padding: 10px;
 	padding-top:30px;
-	text-align:center;
-	/*
-	border-style:solid;
-	border-width:medium;
-	border-color:#D41F55;
-	*/
 	height: 350px;
 }
 .listheads{
@@ -236,6 +230,7 @@ label{
 	font-family:Arial;
 	color:#000;/*#BB0531;*/
 	list-style-type:none;
+	padding:0;
 }
 .subcats a{
 	color:#000;
