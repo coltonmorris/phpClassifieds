@@ -96,19 +96,6 @@ function show_listings_admin($results) {
 					echo "<a href=$link>$val</a>";
 					echo "</div>";
 				}
-				else if ($k == 'cost'){
-					echo "<div class='lCost'>";
-					echo "$val";
-					echo "</div>";
-				}
-				else if ($k == 'image_count'){
-					//camera only displays if listings has a picture
-					if ($val > 0){
-					echo "<div class='lPicture'>";
-					echo "<img src='camera.png'>";
-					echo "</div>";
-					}
-				}
 			}
 
 		echo "<td><a href=delete_job.php?id=$id>delete</a></td>";
