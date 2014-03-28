@@ -12,16 +12,13 @@
     <div class="iCost">
     	$350
     </div>
-    <div class="iSlider">
     	<a href="images/55colton0.png" rel="shadowbox">colton</a>
-    </div>
     <div class="iDescription">
     	Big words scare me!
     </div>
     <div class="iContact">
     	four three five
     </div>
-</div>
 <!--?php 
 $id = $_GET['id'];
 $query = "select * from listings where id='$id'";
