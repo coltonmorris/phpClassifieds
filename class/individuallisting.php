@@ -2,7 +2,7 @@
 <script type="text/javascript">
 	Shadowbox.init();
 </script>
-<div class="content">
+<div class="icontent">
 	<div class="iSubject">
     	OMG sell books!
     </div>
