@@ -43,7 +43,8 @@
 print_r($_GET);
 if (isset($_GET['submit'])){
 $keyword = $_GET['keyword'];
-$query= "select id,date,subject,cost,image_count from listings where description like '%$keyword%'";
+$query= "select id,date,subject,cost,image_count from listings where 
+			(description like '%$keyword%' or subject like '%$keyword%')";
 //$catagory = $_GET['catagory'];
 //$subcatagory = $_GET['subcatagory'];
 //$query = "select id,date,subject,cost,image_count from listings where description like '%$keyword%'
