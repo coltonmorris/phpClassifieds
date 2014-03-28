@@ -11,7 +11,7 @@ function do_query($query){
 }
 
 function timestamp_to_date($timestamp){
-	return date('F d',$timestamp);
+	return date('F d',strtotime($timestamp));
 }
 function search_function(){
 	echo "<form action='<?$_SERVER[PHP_SELF]?>' method='GET'>";
