@@ -82,6 +82,7 @@ echo "<div class='iSlider'>";
 echo '<ul>';
 $images = array($image_0,$image_1,$image_2,$image_3);
 foreach($images as $image=>$val){
+	echo "$image and $val \n";
 	if ($val == 0){
 		echo "it is null";
 	}
