@@ -1,5 +1,17 @@
 <?php include_once('head.php');?>
-<? search_function(); ?>
+<? 
+search_function();
+if (isset($_GET['submit'])){
+	echo "search function";
+}
+else{
+	echo "not search function";
+}
+//
+//$query = "select * from listings";
+//$results = do_query($query);
+//show_listings($results);
+?>
 <!--
    <div class="lItem">
     	<div class="lDate">

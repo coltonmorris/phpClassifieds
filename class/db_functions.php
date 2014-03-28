@@ -69,7 +69,6 @@ function search_function(){
 		show_listings($results);
 		}
 	else{
-		//echo "search function not running";
 //	$query = "select id,date,subject,cost,image_count from listings";
 //	$results = do_query($query);
 //	show_listings($results);
