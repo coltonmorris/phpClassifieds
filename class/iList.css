@@ -16,14 +16,20 @@
 	color: #fff;
 }
 .iSlider{
-	margin-left:auto;
-	margin-right:auto;	
+	padding: 20px 0 20px 0;	
+}
+.iSlider{
+	list-style:none;
+	list-style-image:none;
+	list-style-type:none;
+}
+.iSlider li{
+	display:inline-block;
+	padding:5px;
 }
 .iSlider img{
 	width: 200px;
 	height: 200px;
-	float:left;
-	padding: 5px;
 }
 .iCost{
 }
