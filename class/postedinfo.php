@@ -54,7 +54,6 @@ if ($image_count > 0){
 }
 //update listing to include the base filename and image count
 //$query = "update listings set image_count=$image_count, base_image='$base_image' where id=$id";
-echo "test";
 $query = "update listings set image_count=$image_count where id=$id";
 $results = do_query($query);
 
