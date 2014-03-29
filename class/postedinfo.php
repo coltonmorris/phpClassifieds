@@ -24,6 +24,7 @@ $id = $row[0];
 //PROBLEM: FILE EXTENSIONS ARE NOT REMEMBERED
 //for example: images/colton0201 through images/colton0204
 //if image count was 4.
+print_r($_FILES);
 $image_count = count($_FILES['images']['name']);
 echo $image_count;
 //planning on the base image being their listing id + username + index
