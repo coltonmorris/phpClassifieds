@@ -52,10 +52,10 @@ echo "</div>";
 echo "<div class='iCost'>";
 	echo "$cost";
 echo "</div>";
-echo "<div class='iSlider'>";
-echo '<ul>';
 //loop through images, if it is empty, don't do anything
 if($image_count != 0){
+	echo "<div class='iSlider'>";
+	echo '<ul>';
 	$images = array($image_0,$image_1,$image_2,$image_3);
 	foreach($images as $image=>$val){
 		if ($image_count > 0){
@@ -63,9 +63,9 @@ if($image_count != 0){
 		}
 		$image_count --;
 	}
+	echo '</ul>';
+	echo '</div>';
 }
-echo '</ul>';
-echo '</div>';
 echo "<div class='iDescription'>";
 	echo $description;
 echo "</div>";
