@@ -60,6 +60,8 @@ function search_function(){
 		$keyword = $_GET['keyword'];
 		$query= "select id,date,subject,cost,image_count from listings where 
 					(description like '%$keyword%' or subject like '%$keyword%')";
+		echo $catagory;
+		echo $subcatagory;
 		
 		if(isset($subcatagory)){
 			echo "test";
