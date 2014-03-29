@@ -278,13 +278,18 @@ function login($username,$password){
 	$query = "select RoleID,email from users where username='$username'
 							and password='$password'";
 	$results = do_query($query);
-	if (mysqli_num_rows($results) >0){
-		$row=mysqli_fetch_assoc($results);
-		$RoleID = $row['RoleID'];
-		$_SESSION['email']    = $row['email'];
+while ($row = mysqli_fetch_assoc($results)){
+	foreach ($row as $k =>$val){
+		if ($k == 'RoleID'){
+			$_SESSION['RoleID'] = $val;
+		}
+		else if ($k == 'email'){
+			$_SESSION['email'] = $val;
+		}
+	}
+}
 		$_SESSION['username'] = $username;
 		$_SESSION['password'] = $password;
-		$_SESSION['RoleID'] = $RoleID;
 		$filename = "user_control.php";
 		//admin
 		if ($RoleID == 1){

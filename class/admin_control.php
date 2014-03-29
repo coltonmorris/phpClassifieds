@@ -1,6 +1,7 @@
 <?php 
 include_once('head.php');
-if (!isset($_SESSION['control_panel']) || $_SESSION['control_panel'] != 'admin_control.php' && $_SESSION['RoleID'] != 1){
+//if (!isset($_SESSION['control_panel']) || $_SESSION['control_panel'] != 'admin_control.php' && $_SESSION['RoleID'] != 1){
+	if ($_SESSION['RoleID'] != 1){
 	header('Location: index.php');
 }
 echo "<div class='listheads'>Listings</div>";
