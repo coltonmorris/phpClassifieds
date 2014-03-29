@@ -12,6 +12,7 @@
 			<?php 
 			if (isset($_SESSION['username'])){
 			echo $_SESSION['username'] ." you are logged in";
+			echo $_SESSION['email'] . " is your email";
 			}
 			else {
 				echo "Please login";
