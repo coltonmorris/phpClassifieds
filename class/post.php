@@ -2,6 +2,7 @@
 <div class="content">
 		<script>
 			function limit(element, maxchars) {
+				maxchars -= 1;
 				el = element.value; //set the value to manipulate
 				flip = false; //check to see if we had to flip int to string
 				if (typeof el == "number") //see if el is a number
