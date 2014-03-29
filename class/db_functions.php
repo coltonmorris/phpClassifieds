@@ -15,11 +15,9 @@ function timestamp_to_date($timestamp){
 }
 function search_function(){
 	if (isset($_GET['catagory'])){
-		echo "est";
 		$catagory = $_GET['catagory'];
 	}
 	if (isset($_GET['subcatagory'])){
-		echo "hello";
 		$subcatagory = $_GET['subcatagory'];
 	}
 	echo "<form action='$_SERVER[PHP_SELF]' method='GET'>";
@@ -66,6 +64,15 @@ function search_function(){
 
 	if (isset($_GET['submit'])){
 		$keyword = $_GET['keyword'];
+		if (isset($_GET['catagory'])){
+			echo "hi";
+			$catagory = $_GET['catagory'];
+		}
+		if (isset($_GET['subcatagory'])){
+			echo "hello";
+			$subcatagory = $_GET['subcatagory'];
+		}
+
 		$query= "select id,date,subject,cost,image_count from listings where 
 					(description like '%$keyword%' or subject like '%$keyword%')";
 		echo $catagory;
