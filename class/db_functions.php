@@ -19,13 +19,9 @@ function search_function(){
 	echo "  <input type='text' name='keyword' maxlength='68'><br><br>";
 	if (isset($_GET['catagory'])){
 		$catagory = $_GET['catagory'];
-		echo "<input type='text' name='catagory' value='$catagory'>";
-		echo "<br><br>";
 	}
 	if (isset($_GET['subcatagory'])){
 		$subcatagory = $_GET['subcatagory'];
-		echo "<input type='text' name='subcatagory' value='$subcatagory'>";
-		echo "<br><br>";
 	}
 //	echo "        <script type='text/javascript'>";
 //	echo "			$(document).ready(function() {";
@@ -64,6 +60,7 @@ function search_function(){
 		$keyword = $_GET['keyword'];
 		$query= "select id,date,subject,cost,image_count from listings where 
 					(description like '%$keyword%' or subject like '%$keyword%')";
+		
 		if(isset($subcatagory)){
 			$query= "select id,date,subject,cost,image_count from listings where 
 						(description like '%$keyword%' or subject like '%$keyword%')
