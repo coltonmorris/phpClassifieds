@@ -62,11 +62,13 @@ function search_function(){
 					(description like '%$keyword%' or subject like '%$keyword%')";
 		
 		if(isset($subcatagory)){
+			echo "test";
 			$query= "select id,date,subject,cost,image_count from listings where 
 						(description like '%$keyword%' or subject like '%$keyword%')
 						and catagory='$catagory' and subcatagory='$subcatagory'";
 		}
 		else if(isset($catagory)){
+			echo "catagory";
 			$query= "select id,date,subject,cost,image_count from listings where 
 						(description like '%$keyword%' or subject like '%$keyword%')
 						and catagory='$catagory'";
