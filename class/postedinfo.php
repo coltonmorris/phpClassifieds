@@ -28,7 +28,9 @@ echo "<PRE>";
 print_r($_FILES);
 echo "</PRE>";
 $image_count = count($_FILES['images']['name']);
-echo $_FILES['images']['name'][0];
+if( $_FILES['images']['name'][0] == null){
+	echo "wow, much image, very empty";
+}
 echo $image_count;
 //planning on the base image being their listing id + username + index
 $base_image = 'images/' . "$id" . $username;
