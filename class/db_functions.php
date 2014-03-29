@@ -14,16 +14,18 @@ function timestamp_to_date($timestamp){
 	return date('F d',strtotime($timestamp));
 }
 function search_function(){
-	$catagory = $_GET['catagory'];
 	echo "<form action='$_SERVER[PHP_SELF]' method='GET'>";
 	echo "	<label for='subject'>Keyword:</label> ";
 	echo "  <input type='text' name='keyword' maxlength='68'><br><br>";
-//	echo "	<input type='text' name='catagory' value='$catagory'><br><br>";
-//	if (isset($_GET['subcatagory'])){
-//		$subcatagory = $_GET['subcatagory'];
-//	echo "	<input type='text'
-//					name='subcatagory' value='$subcatagory'><br><br>";
-//	}
+	if (isset($_GET['catagory'])){
+		$catagory = $_GET['catagory'];
+	echo "	<input type='text' name='catagory' value='$catagory'>";
+	echo "<br><br>";
+	if (isset($_GET['subcatagory'])){
+		$subcatagory = $_GET['subcatagory'];
+	echo "	<input type='text' name='subcatagory' value='$subcatagory'>";
+	echo "<br><br>";
+	}
 //	echo "        <script type='text/javascript'>";
 //	echo "			$(document).ready(function() {";
 //	echo "				//alert('Document is ready');";
@@ -61,6 +63,13 @@ function search_function(){
 		$keyword = $_GET['keyword'];
 		$query= "select id,date,subject,cost,image_count from listings where 
 					(description like '%$keyword%' or subject like '%$keyword%')";
+		//if(isset($subcatagory)){
+		else if(isset($catagory)){
+			$query= "select id,date,subject,cost,image_count from listings where 
+						(description like '%$keyword%' or subject like '%$keyword%')
+						and catagory='$catagory'";
+		}
+
 		//$catagory = $_GET['catagory'];
 		//$subcatagory = $_GET['subcatagory'];
 		//$query = "select id,date,subject,cost,image_count from listings where description like '%$keyword%'
