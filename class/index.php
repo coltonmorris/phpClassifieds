@@ -28,7 +28,7 @@
             height      	: $('#container').height(),
             width       	: $('#container').width(),
 			animduration    : 800,  
-            animspeed       : 8000,
+            animspeed       : 7000,
 			animtype 		: 'slide',
 			showcontrols    : false,
 			showmarkers     : false,
