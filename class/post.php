@@ -4,10 +4,22 @@
 	<div>
 		<label for="subject">*Subject:</label> 
         <input type="text" required name="subject" maxlength="68"><br><br>
+        <script>
+			subject.oninput = function () {
+				if (this.value.length > 68)
+					this.value = this.value.slice(0,67); 
+			}
+		</script>
 		<label for="description">*Description: </label>
         <textarea name="description" required cols="60" rows="5"></textarea><br><br>
 		<label for="cost">*Cost: </label>
-        <input type="number" maxlength="5" required name="cost"><br><br>
+        <input type="number" max="99999" required name="cost"><br><br>
+        <script>
+			cost.oninput = function () {
+				if (this.value.length > 5)
+					this.value = this.value.slice(0,4); 
+			}
+		</script>
         <script type="text/javascript">
 			$(document).ready(function() {
 				//alert('Document is ready');
