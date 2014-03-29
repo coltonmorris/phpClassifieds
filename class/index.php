@@ -23,7 +23,7 @@
             height      	: $('#container').height(),
             width       	: $('#container').width(),
 			animduration    : 800,  
-            animspeed       : 30000,
+            animspeed       : 8000,
 			showcontrols    : false,
 			showmarkers     : false,
 			responsive  	: false,

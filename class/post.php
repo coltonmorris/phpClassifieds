@@ -1,6 +1,6 @@
 <?php include_once('head.php') ?>
 <div class="content">
-		<script>
+		<script> //this script disallows adding extra characters to a text field or number field. It is modular.
 			function limit(element, maxchars) {
 				maxchars -= 1;
 				el = element.value; //set the value to manipulate
