@@ -64,11 +64,11 @@ function search_function(){
 		$query= "select id,date,subject,cost,image_count from listings where 
 					(description like '%$keyword%' or subject like '%$keyword%')";
 		//if(isset($subcatagory)){
-		else if(isset($catagory)){
-			$query= "select id,date,subject,cost,image_count from listings where 
-						(description like '%$keyword%' or subject like '%$keyword%')
-						and catagory='$catagory'";
-		}
+	//	else if(isset($catagory)){
+	//		$query= "select id,date,subject,cost,image_count from listings where 
+	//					(description like '%$keyword%' or subject like '%$keyword%')
+	//					and catagory='$catagory'";
+	//	}
 
 		//$catagory = $_GET['catagory'];
 		//$subcatagory = $_GET['subcatagory'];
