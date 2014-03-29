@@ -63,6 +63,7 @@ foreach($images as $image=>$val){
 	$image_count --;
 }
 echo '</ul>';
+echo '</div>';
 echo "<div class='iDescription'>";
 	echo $description;
 echo "</div>";
