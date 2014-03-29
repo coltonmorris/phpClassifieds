@@ -30,6 +30,7 @@ echo "</PRE>";
 $image_count = count($_FILES['images']['name']);
 if( $_FILES['images']['name'][0] == null){
 	echo "wow, much image, very empty";
+	$image_count = 0;
 }
 echo $image_count;
 //planning on the base image being their listing id + username + index
