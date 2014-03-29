@@ -68,7 +68,7 @@ echo "<div class='iDescription'>";
 	echo $description;
 echo "</div>";
 echo "<div class='iContact'>";
-	echo "801-505-66666666";
+	echo $_SESSION['email'];
 echo "</div>";
 
 ?>

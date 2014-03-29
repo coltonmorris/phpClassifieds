@@ -69,11 +69,9 @@ function search_function(){
 		echo $_GET['catagory'];
 		echo $_GET['subcatagory'];
 		if (isset($_GET['catagory'])){
-			echo "hi";
 			$catagory = $_GET['catagory'];
 		}
 		if (isset($_GET['subcatagory'])){
-			echo "hello";
 			$subcatagory = $_GET['subcatagory'];
 		}
 
@@ -83,18 +81,15 @@ function search_function(){
 		echo $subcatagory;
 		
 		if(isset($subcatagory)){
-			echo "test";
 			$query= "select id,date,subject,cost,image_count from listings where 
 						(description like '%$keyword%' or subject like '%$keyword%')
 						and catagory='$catagory' and subcatagory='$subcatagory'";
 		}
 		else if(isset($catagory)){
-			echo "catagory";
 			$query= "select id,date,subject,cost,image_count from listings where 
 						(description like '%$keyword%' or subject like '%$keyword%')
 						and catagory='$catagory'";
 		}
-		echo $query;
 
 		//$catagory = $_GET['catagory'];
 		//$subcatagory = $_GET['subcatagory'];
@@ -280,12 +275,13 @@ session_destroy();
 function login($username,$password){
 	//we are only going to have an admin
 	session_start();
-	$query = "select RoleID from users where username='$username'
+	$query = "select RoleID,email from users where username='$username'
 							and password='$password'";
 	$results = do_query($query);
 	if (mysqli_num_rows($results) >0){
 		$row=mysqli_fetch_assoc($results);
 		$RoleID = $row['RoleID'];
+		$_SESSION['email']    = $row['email'];
 		$_SESSION['username'] = $username;
 		$_SESSION['password'] = $password;
 		$_SESSION['RoleID'] = $RoleID;
