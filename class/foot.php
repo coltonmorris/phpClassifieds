@@ -13,6 +13,7 @@
 			if (isset($_SESSION['username'])){
 			echo $_SESSION['username'] ." you are logged in";
 			echo $_SESSION['email'] . " is your email";
+			echo $_SESSION['RoleID'] . " is your RoleID";
 			}
 			else {
 				echo "Please login";
