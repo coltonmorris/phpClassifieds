@@ -14,14 +14,14 @@ function timestamp_to_date($timestamp){
 	return date('F d',strtotime($timestamp));
 }
 function search_function(){
-	echo $_GET['catagory'];
-	echo $_GET['subcatagory'];
 	if (isset($_GET['catagory'])){
 		$catagory = $_GET['catagory'];
 	}
 	if (isset($_GET['subcatagory'])){
 		$subcatagory = $_GET['subcatagory'];
 	}
+	echo $catagory;
+	echo $subcatagory;
 	echo "<form action='$_SERVER[PHP_SELF]' method='GET'>";
 	echo "	<label for='subject'>Keyword:</label> ";
 	echo "  <input type='text' name='keyword' maxlength='68'><br><br>";
