@@ -282,6 +282,7 @@ function login($username,$password){
 	if (mysqli_num_rows($results) >0){
 		while ($row = mysqli_fetch_assoc($results)){
 			foreach ($row as $k =>$val){
+				echo $k
 				if ($k == 'RoleID'){
 					$_SESSION['RoleID'] = $val;
 				}
