@@ -14,7 +14,6 @@ function timestamp_to_date($timestamp){
 	return date('F d',strtotime($timestamp));
 }
 function search_function(){
-	echo "wow";
 	if (isset($_GET['catagory'])){
 		echo "est";
 		$catagory = $_GET['catagory'];
@@ -26,6 +25,12 @@ function search_function(){
 	echo "<form action='$_SERVER[PHP_SELF]' method='GET'>";
 	echo "	<label for='subject'>Keyword:</label> ";
 	echo "  <input type='text' name='keyword' maxlength='68'><br><br>";
+	if (isset($catagory)){
+		echo "<input type='text name='catagory' value='$catagory' hidden><br><br>";
+	}
+	if (isset($subcatagory)){
+		echo "<input type='text name='subcatagory' value='$subcatagory' hidden><br><br>";
+	}
 //	echo "        <script type='text/javascript'>";
 //	echo "			$(document).ready(function() {";
 //	echo "				//alert('Document is ready');";
@@ -78,7 +83,6 @@ function search_function(){
 						(description like '%$keyword%' or subject like '%$keyword%')
 						and catagory='$catagory'";
 		}
-		echo $query;
 
 		//$catagory = $_GET['catagory'];
 		//$subcatagory = $_GET['subcatagory'];
