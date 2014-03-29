@@ -10,9 +10,14 @@
 <div id="container">
 	<div id="banner-fade">
     	<ul class="bjqs">
-        	<li><img src="http://images.universityherald.com/data/images/full/4147/dixie-state-university.jpg?w=600" title="DSU"></li>
-            <li><img src="http://dixie.edu/commencement/Image/DSC_Grad261.jpg" title="Graduates"></li>
-            <li><img src="http://mediad.publicbroadcasting.net/p/kuer/files/201302/UT-Capitol-Stock-06.jpg" title="Capitol"></li>
+        	<?php
+						$directory = 'sliderimages/';
+						$ext = '.{jpg,png,gif,jpeg,JPG}';
+						$files = glob($directory. '*' .$ext, GLOB_BRACE);
+						foreach($files as $file) {
+							echo "<li><img src=$file></li>";
+						};
+					?>
         </ul>
     </div>
 </div>
