@@ -14,6 +14,7 @@ function timestamp_to_date($timestamp){
 	return date('F d',strtotime($timestamp));
 }
 function search_function(){
+	echo "wow";
 	if (isset($_GET['catagory'])){
 		echo "est";
 		$catagory = $_GET['catagory'];
