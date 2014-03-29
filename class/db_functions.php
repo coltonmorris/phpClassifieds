@@ -64,6 +64,8 @@ function search_function(){
 
 	if (isset($_GET['submit'])){
 		$keyword = $_GET['keyword'];
+		echo $_GET['catagory'];
+		echo $_GET['subcatagory'];
 		if (isset($_GET['catagory'])){
 			echo "hi";
 			$catagory = $_GET['catagory'];
