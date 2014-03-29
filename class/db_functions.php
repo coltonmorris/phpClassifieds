@@ -15,9 +15,11 @@ function timestamp_to_date($timestamp){
 }
 function search_function(){
 	if (isset($_GET['catagory'])){
+		echo "est";
 		$catagory = $_GET['catagory'];
 	}
 	if (isset($_GET['subcatagory'])){
+		echo "hello";
 		$subcatagory = $_GET['subcatagory'];
 	}
 	echo "<form action='$_SERVER[PHP_SELF]' method='GET'>";
