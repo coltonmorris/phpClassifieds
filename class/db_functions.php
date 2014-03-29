@@ -176,6 +176,7 @@ function show_listings_admin($results) {
 			foreach ($row as $k => $val) {
 			//id is populated first, so there will be no problems with the subject
 				if ($k == 'id'){
+					$id = $val;
 					$link = "individuallisting.php?id=$val";
 				}
 				if ($k == 'date') {
