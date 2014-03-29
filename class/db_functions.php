@@ -278,17 +278,17 @@ function login($username,$password){
 	$query = "select RoleID from users where username='$username'
 							and password='$password'";
 	$results = do_query($query);
-	while ($row = mysqli_fetch_assoc($results)){
-		foreach ($row as $k =>$val){
-			if ($k == 'RoleID'){
-				$_SESSION['RoleID'] = $val;
-			}
-			else if ($k == 'email'){
-				$_SESSION['email'] = 'test';
+	if (mysqli_num_rows($results) >0){
+		while ($row = mysqli_fetch_assoc($results)){
+			foreach ($row as $k =>$val){
+				if ($k == 'RoleID'){
+					$_SESSION['RoleID'] = $val;
+				}
+				else if ($k == 'email'){
+					$_SESSION['email'] = 'test';
+				}
 			}
 		}
-	}
-	if (mysqli_num_rows($results) >0){
 
 				$RoleID = $row['RoleID'];
 				$_SESSION['username'] = $username;
