@@ -35,6 +35,7 @@ pre + h2{
 	margin-left:auto;
 	margin-right:auto;
 	position:relative;
+	z-index:0;
 	/*top:-52px;*/
 }
 
