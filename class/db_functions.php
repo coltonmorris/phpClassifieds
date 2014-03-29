@@ -71,6 +71,7 @@ function search_function(){
 						(description like '%$keyword%' or subject like '%$keyword%')
 						and catagory='$catagory'";
 		}
+		echo $query;
 
 		//$catagory = $_GET['catagory'];
 		//$subcatagory = $_GET['subcatagory'];
