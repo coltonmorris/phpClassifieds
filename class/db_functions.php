@@ -276,7 +276,7 @@ session_destroy();
 function login($username,$password){
 	//we are only going to have an admin
 	session_start();
-	$query = "select RoleID from users where username='$username'
+	$query = "select RoleID,email from users where username='$username'
 							and password='$password'";
 	$results = do_query($query);
 	if (mysqli_num_rows($results) >0){
