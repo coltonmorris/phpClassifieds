@@ -24,15 +24,11 @@ $id = $row[0];
 //PROBLEM: FILE EXTENSIONS ARE NOT REMEMBERED
 //for example: images/colton0201 through images/colton0204
 //if image count was 4.
-echo "<PRE>";
-print_r($_FILES);
-echo "</PRE>";
 $image_count = count($_FILES['images']['name']);
 if( $_FILES['images']['name'][0] == null){
 	echo "wow, much image, very empty";
 	$image_count = 0;
 }
-echo $image_count;
 //planning on the base image being their listing id + username + index
 $base_image = 'images/' . "$id" . $username;
 //upload files
