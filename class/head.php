@@ -1,4 +1,7 @@
-<?php session_start(); 
+<?php 
+if (!isset($_SESSION['badlogin'])){
+	session_start(); 
+}
 if (!isset($_SESSION['allow'])){
 	if ($_SERVER['PHP_SELF'] != '/phpClassifieds/class/login.php' &&
 			$_SERVER['PHP_SELF'] != '/phpClassifieds/class/log.php' &&
