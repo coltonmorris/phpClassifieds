@@ -289,7 +289,7 @@ function login($username,$password){
 				$_SESSION['email'] = $val;
 			}
 			else {
-				$fail = true;
+				//$fail = true;
 			}
 		}
 	}
