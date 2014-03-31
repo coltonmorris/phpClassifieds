@@ -275,7 +275,7 @@ session_destroy();
 }
 function login($username,$password){
 	//we are only going to have an admin
-	session_start();
+	//session_start();
 	$query = "select RoleID,email from users where username='$username'
 							and password='$password'";
 	$results = do_query($query);
