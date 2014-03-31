@@ -285,7 +285,7 @@ function login($username,$password){
 				if ($k == 'RoleID'){
 					$_SESSION['RoleID'] = $val;
 				}
-				if ($k == 'email'){
+				else if ($k == 'email'){
 					$_SESSION['email'] = $val;
 				}
 			}

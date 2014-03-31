@@ -1,6 +1,8 @@
 <?php 
 	//if ($_SESSION['RoleID'] != 1){
-	echo $_SESSION['RoleID'];
+	if( $_SESSION['RoleID'] == null){
+		echo "problem";
+	}
 	echo "test";
 	//header('Location: index.php');
 //}
