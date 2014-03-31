@@ -279,7 +279,7 @@ function login($username,$password){
 	$query = "select RoleID,email from users where username='$username'
 							and password='$password'";
 	$results = do_query($query);
-	bool fail = false;
+	$fail = false;
 		while ($row = mysqli_fetch_assoc($results)){
 			foreach ($row as $k =>$val){
 				if ($k == 'RoleID'){
@@ -289,7 +289,7 @@ function login($username,$password){
 					$_SESSION['email'] = $val;
 				}
 				else {
-					fail = true;
+					$fail = true;
 				}
 			}
 		}
