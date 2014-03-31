@@ -1,7 +1,7 @@
 <?php 
 include_once('head.php');
 //do not allow people access to page is they are not an admin
-if ($_SESSION['RoleID'] != 1){
+if ($_SESSION['RoleID'] == 1){
 	echo "<div class='listheads'>Listings</div>";
 	$username = $_SESSION['username'];
 	$password = $_SESSION['password'];
