@@ -15,7 +15,15 @@ if ($_SESSION['RoleID'] == 1){
 	show_user_admin($results);
 }
 else {
-	echo "You do not have permission to visit this page";
+	echo	"<div class='content'>";
+	echo	"<h2>";
+    echo 		"404!";
+    echo	"</h2>";
+	echo "	Looks like you Got lost! Here's some music to cheer you up!<br>
+				<div id='lost'>
+					<iframe width='560' height='315' src='//www.youtube.com/embed/32eywT-bQhQ' frameborder='0' allowfullscreen></iframe>
+				</div>
+			</div>";
 }
 ?>
 <?php include_once('foot.php') ?>

@@ -2,7 +2,7 @@
 	header("Status: 404 Not Found");
 	include_once('head.php');
 	?>
-<div id="middlecolumn">
+<div class="content">
 	<h2>
     	404!
     </h2>
