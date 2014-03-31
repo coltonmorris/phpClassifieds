@@ -293,22 +293,22 @@ function login($username,$password){
 			}
 		}
 	}
-
-		$RoleID = $row['RoleID'];
+	if (!$fail){
+		//$RoleID = $row['RoleID'];
 		$_SESSION['username'] = $username;
 		$_SESSION['password'] = $password;
-		$filename = "user_control.php";
+		//$filename = "user_control.php";
 		//admin
-		if ($RoleID == 1){
+//		if ($RoleID == 1){
 			$filename = "admin_control.php";
-		}
+		//}
 		$_SESSION['control_panel'] = $filename;
 		$_SESSION['allow'] = true;
 		$_SESSION['badlogin']=false;
-			
-		if ($fail) { 
-			$_SESSION['badlogin']=true;
-		}
+	}
+	else { 
+		$_SESSION['badlogin']=true;
+	}
 }
 
 //anything below this is for reference and not actually used
