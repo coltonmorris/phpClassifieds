@@ -279,20 +279,20 @@ function login($username,$password){
 	$query = "select RoleID,email from users where username='$username'
 							and password='$password'";
 	$results = do_query($query);
-	bool fail = false;
-		while ($row = mysqli_fetch_assoc($results)){
-			foreach ($row as $k =>$val){
-				if ($k == 'RoleID'){
-					$_SESSION['RoleID'] = $val;
-				}
-				else if ($k == 'email'){
-					$_SESSION['email'] = $val;
-				}
-				else {
-					fail = true;
-				}
+	$fail = false;
+	while ($row = mysqli_fetch_assoc($results)){
+		foreach ($row as $k =>$val){
+			if ($k == 'RoleID'){
+				$_SESSION['RoleID'] = $val;
+			}
+			else if ($k == 'email'){
+				$_SESSION['email'] = $val;
+			}
+			else {
+				$fail = true;
 			}
 		}
+	}
 
 		$RoleID = $row['RoleID'];
 		$_SESSION['username'] = $username;
@@ -306,7 +306,7 @@ function login($username,$password){
 		$_SESSION['allow'] = true;
 		$_SESSION['badlogin']=false;
 			
-		if (fail) { 
+		if ($fail) { 
 			$_SESSION['badlogin']=true;
 		}
 }
