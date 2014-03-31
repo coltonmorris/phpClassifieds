@@ -293,7 +293,7 @@ function login($username,$password){
 			}
 		}
 	}
-	if (!$fail){
+	//if (!$fail){
 		//$RoleID = $row['RoleID'];
 		$_SESSION['username'] = $username;
 		$_SESSION['password'] = $password;
@@ -305,10 +305,10 @@ function login($username,$password){
 		$_SESSION['control_panel'] = $filename;
 		$_SESSION['allow'] = true;
 		$_SESSION['badlogin']=false;
-	}
-	else { 
-		$_SESSION['badlogin']=true;
-	}
+	//}
+//	else { 
+//		$_SESSION['badlogin']=true;
+//	}
 }
 
 //anything below this is for reference and not actually used
