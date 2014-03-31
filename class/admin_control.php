@@ -1,6 +1,7 @@
 <?php 
 include_once('head.php');
 if ($_SESSION['RoleID'] != 1){
+	echo 'not allowed';
 	header('Location: index.php');
 }
 //if (!isset($_SESSION['control_panel']) || $_SESSION['control_panel'] != 'admin_control.php' && $_SESSION['RoleID'] != 1){
