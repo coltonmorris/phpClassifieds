@@ -1,6 +1,7 @@
 <?php 
 	//if ($_SESSION['RoleID'] != 1){
 	echo $_SESSION['RoleID'];
+	echo "test";
 	//header('Location: index.php');
 //}
 include_once('head.php');
