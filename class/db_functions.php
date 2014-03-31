@@ -279,7 +279,7 @@ function login($username,$password){
 	$query = "select RoleID,email from users where username='$username'
 							and password='$password'";
 	$results = do_query($query);
-	if (mysqli_num_rows($results) >0){
+	bool fail = false;
 		while ($row = mysqli_fetch_assoc($results)){
 			foreach ($row as $k =>$val){
 				if ($k == 'RoleID'){
@@ -288,25 +288,28 @@ function login($username,$password){
 				else if ($k == 'email'){
 					$_SESSION['email'] = $val;
 				}
+				else {
+					fail = true;
+				}
 			}
 		}
 
-				$RoleID = $row['RoleID'];
-				$_SESSION['username'] = $username;
-				$_SESSION['password'] = $password;
-				$filename = "user_control.php";
-				//admin
-				if ($RoleID == 1){
-					$filename = "admin_control.php";
-				}
-				$_SESSION['control_panel'] = $filename;
-				$_SESSION['allow'] = true;
-				$_SESSION['badlogin']=false;
-			}
-		else { 
+		$RoleID = $row['RoleID'];
+		$_SESSION['username'] = $username;
+		$_SESSION['password'] = $password;
+		$filename = "user_control.php";
+		//admin
+		if ($RoleID == 1){
+			$filename = "admin_control.php";
+		}
+		$_SESSION['control_panel'] = $filename;
+		$_SESSION['allow'] = true;
+		$_SESSION['badlogin']=false;
+			
+		if (fail) { 
 			$_SESSION['badlogin']=true;
 		}
-	}
+}
 
 //anything below this is for reference and not actually used
 function functional_textarea_jobs($username,$field,$submit_button,$primary){
