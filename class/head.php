@@ -1,5 +1,6 @@
 <?php 
 if (!isset($_SESSION['badlogin'])){
+	echo "session start";
 	session_start(); 
 }
 if (!isset($_SESSION['allow'])){

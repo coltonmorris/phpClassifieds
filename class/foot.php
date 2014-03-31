@@ -11,7 +11,8 @@
         	<div class="logged">
 			<?php 
 			if (isset($_SESSION['username'])){
-			echo $_SESSION['username'] ." you are logged in";
+			echo $_SESSION['username'] ." you are logged in<br>";
+			echo $_SESSION['RoleID'] ." is your role id!!";
 			}
 			else {
 				echo "Please login";
