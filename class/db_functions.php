@@ -273,42 +273,76 @@ function add_user($username,$password,$email,$RoleID){
 function logout(){
 session_destroy();
 }
-function login($username,$password){
-	//we are only going to have an admin
-	//session_start();
-	$query = "select RoleID,email from users where username='$username'
-							and password='$password'";
-	$results = do_query($query);
-	$fail = false;
-	while ($row = mysqli_fetch_assoc($results)){
-		foreach ($row as $k =>$val){
-			if ($k == 'RoleID'){
-				$_SESSION['RoleID'] = $val;
-			}
-			else if ($k == 'email'){
-				$_SESSION['email'] = $val;
-			}
-			else {
-				//$fail = true;
-			}
-		}
-	}
-	//if (!$fail){
-		//$RoleID = $row['RoleID'];
-		$_SESSION['username'] = $username;
-		$_SESSION['password'] = $password;
-		//$filename = "user_control.php";
-		//admin
-//		if ($RoleID == 1){
-			$filename = "admin_control.php";
-		//}
-		$_SESSION['control_panel'] = $filename;
-		$_SESSION['allow'] = true;
-		$_SESSION['badlogin']=false;
-	//}
-//	else { 
-//		$_SESSION['badlogin']=true;
+//function login($username,$password){
+//	//we are only going to have an admin
+//	//session_start();
+//	$query = "select RoleID,email from users where username='$username'
+//							and password='$password'";
+//	$results = do_query($query);
+//	$fail = false;
+//	while ($row = mysqli_fetch_assoc($results)){
+//		foreach ($row as $k =>$val){
+//			if ($k == 'RoleID'){
+//				$_SESSION['RoleID'] = $val;
+//			}
+//			else if ($k == 'email'){
+//				$_SESSION['email'] = $val;
+//			}
+//			else {
+//				//$fail = true;
+//			}
+//		}
 //	}
+//	//if (!$fail){
+//		//$RoleID = $row['RoleID'];
+//		$_SESSION['username'] = $username;
+//		$_SESSION['password'] = $password;
+//		//$filename = "user_control.php";
+//		//admin
+////		if ($RoleID == 1){
+//			$filename = "admin_control.php";
+//		//}
+//		$_SESSION['control_panel'] = $filename;
+//		$_SESSION['allow'] = true;
+//		$_SESSION['badlogin']=false;
+//	}
+////	else { 
+////		$_SESSION['badlogin']=true;
+////	}
+//}
+function login($username,$password){
+  session_destroy();
+  session_start();
+  $query = "select RoleID,email from users where username='$username'
+              and password='$password'";
+  $results = do_query($query);
+  if (mysqli_num_rows($results) >0){
+    $row=mysqli_fetch_assoc($results);
+    $RoleID = $row['RoleID'];
+		$email = $row['email'];
+    $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;
+    $_SESSION['RoleID'] = $RoleID;
+    $_SESSION['email'] = $email;
+    //admin
+    if ($RoleID == 1){ 
+      $filename = "admin_control.php";
+    }   
+    //employer
+    else if ($RoleID == 2){ 
+      $filename = "employer_control.php";
+    }   
+    //employee
+    else{
+      $filename = "employee_control.php";
+    }   
+    $_SESSION['control_panel'] = $filename;
+		$_SESSION['allow'] = true;
+		$_SESSION['badlogin'] = false;
+  }
+  else { 
+		$_SESSION['badlogin'] = true;
+  }
 }
 
 //anything below this is for reference and not actually used
