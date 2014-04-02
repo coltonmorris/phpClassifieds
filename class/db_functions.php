@@ -20,8 +20,6 @@ function search_function(){
 	if (isset($_GET['subcatagory'])){
 		$subcatagory = $_GET['subcatagory'];
 	}
-	echo $catagory;
-	echo $subcatagory;
 	echo "<form action='$_SERVER[PHP_SELF]' method='GET'>";
 	echo "	<label for='subject'>Keyword:</label> ";
 	echo "  <input type='text' name='keyword' maxlength='68'><br><br>";
@@ -77,8 +75,6 @@ function search_function(){
 
 		$query= "select id,date,subject,cost,image_count from listings where 
 					(description like '%$keyword%' or subject like '%$keyword%')";
-		echo $catagory;
-		echo $subcatagory;
 		
 		if(isset($subcatagory)){
 			$query= "select id,date,subject,cost,image_count from listings where 
