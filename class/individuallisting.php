@@ -25,6 +25,9 @@ while ($row = mysqli_fetch_assoc($results)){
 		else if ($k == 'username'){
 			$username = $val;
 		}
+		else if ($k == 'email'){
+			$email = $val;
+		}
 		else if ($k == 'image_count'){
 			$image_count = $val;
 		}
@@ -70,7 +73,7 @@ echo "<div class='iDescription'>";
 	echo $description;
 echo "</div>";
 echo "<div class='iContact'>";
-	echo $_SESSION['email'];
+	echo $email;
 echo "</div>";
 
 ?>

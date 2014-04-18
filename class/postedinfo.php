@@ -6,14 +6,15 @@
 $catagory = $_POST['catagory'];
 $subcatagory = $_POST['subcatagory'];
 $username = $_SESSION['username'];
+$email = $_SESSION['email'];
 $subject = $_POST['subject'];
 $description =$_POST['description'];
 $cost = "$".$_POST['cost'];
 
 //insert into database, wait for listing id to insert the files name
-$query = "insert into listings (catagory, subcatagory,username,
+$query = "insert into listings (catagory, subcatagory,username,email,
 					subject,description,cost) values (
-					'$catagory','$subcatagory','$username','$subject','$description',
+					'$catagory','$subcatagory','$username','$email','$subject','$description',
 					'$cost')";
 $results = do_query($query);
 $query = "select id from listings where username='$username' and description='$description'";
@@ -21,8 +22,6 @@ $results = do_query($query);
 $row = mysqli_fetch_row($results);
 $id = $row[0];
 
-//PROBLEM: FILE EXTENSIONS ARE NOT REMEMBERED
-//for example: images/colton0201 through images/colton0204
 //if image count was 4.
 $image_count = count($_FILES['images']['name']);
 if( $_FILES['images']['name'][0] == null){
