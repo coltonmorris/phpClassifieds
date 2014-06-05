@@ -11,10 +11,10 @@
 <?php
 if (isset($_POST['new_user'])){
 		logout();
-		$username = $_POST['username'];
-		$password = md5($_POST['password'].$_POST['username']);
-		$passconfirm = md5($_POST['confirm'].$_POST['username']);
-		$email = $_POST['email'];
+		$username = mysql_escape_string($_POST['username']);
+		$password = mysql_escape_string(md5($_POST['password'].$_POST['username']));
+		$passconfirm = mysql_escape_string(md5($_POST['confirm'].$_POST['username']));
+		$email = mysql_escape_string($_POST['email']);
 		$allowed_domain = array('dmail.dixie.edu');
 		$RoleID = 0;
 		if (filter_var($email, FILTER_VALIDATE_EMAIL))
