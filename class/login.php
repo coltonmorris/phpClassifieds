@@ -3,7 +3,12 @@ if(isset($_POST['login'])){
 	//set RoleID  1=admin 
 	//login starts a session
 	include_once('db_functions.php');
-	login($_POST['username'],md5($_POST['password'].$_POST['username']));
+	login(
+		mysql_escape_string($_POST['username']),
+		mysql_escape_string(
+			md5($_POST['password'].$_POST['username'])
+			)
+		);
 	if ($_SESSION['badlogin'] == false){
 		header('Location: http://www.ataxicdesign.com/phpClassifieds/class/index.php');
 		exit();
